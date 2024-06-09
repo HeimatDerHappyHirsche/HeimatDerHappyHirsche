@@ -9,14 +9,14 @@ title: "Großglockner"
 };
 
 // Karte initialisieren
-var map = L.map("map").setView([großglockner.lat, großglockner.lng], 15);
+var map = L.map("map").setView([großglockner.lat, großglockner.lng], 10);
 
 // BasemapAT Layer mit Leaflet provider plugin als startLayer Variable
 var startLayer = L.tileLayer.provider("BasemapAT.grau");
 startLayer.addTo(map);
 
 var themaLayer = {
-
+    borders: L.featureGroup()
     //hotels: L.markerClusterGroup({ disableClusteringAtZoom: 17 }).addTo(map),
   }
   // Hintergrundlayer
@@ -29,7 +29,6 @@ var themaLayer = {
       "BasemapAT Oberfläche": L.tileLayer.provider("BasemapAT.surface"),
       "BasemapAT Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto"),
       "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
-      "ESRI.NatGeoWorldMap": L.tileLayer.provider("Esri.NatGeoWorldMap"),
     }).addTo(map);
 
 // Maßstab
@@ -44,3 +43,36 @@ L.control
   .addTo(map);
 
 
+//Startpunkt
+let jsonPunkt = {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [12.6939, 47.074531]
+    },
+    "properties": {
+        "name": "Großglockner"
+
+    }
+};
+L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
+    return `
+    <h2>${layer.feature.properties.name}</h2>
+    <ul> 
+        <li>Breite: ${layer.feature.geometry.coordinates[0]}</li>
+        <li>Länge: ${layer.feature.geometry.coordinates[1]}</li>
+    </ul>
+`;
+}).addTo(map);
+
+
+//add Außengrenzen
+
+// Fetch JSON data from the local file
+fetch('npht_agrenze_new.geojson')
+    .then(response => response.json())
+    .then(data => {
+        // Process the fetched data and add it to the map
+        L.geoJSON(data).addTo(map);
+    })
+    .catch(error => console.error('Error fetching data:', error));
