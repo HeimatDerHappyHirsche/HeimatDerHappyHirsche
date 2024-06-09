@@ -16,7 +16,7 @@ var startLayer = L.tileLayer.provider("BasemapAT.grau");
 startLayer.addTo(map);
 
 var themaLayer = {
-    borders: L.featureGroup()
+    borders: L.featureGroup().addTo(map),
     //hotels: L.markerClusterGroup({ disableClusteringAtZoom: 17 }).addTo(map),
   }
   // Hintergrundlayer
@@ -29,7 +29,10 @@ var themaLayer = {
       "BasemapAT Oberfläche": L.tileLayer.provider("BasemapAT.surface"),
       "BasemapAT Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto"),
       "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
-    }).addTo(map);
+    }, {
+      "Nationalparkgrenzen": themaLayer.borders,
+    })
+    .addTo(map);
 
 // Maßstab
 L.control
@@ -73,6 +76,6 @@ fetch('npht_agrenze_new.geojson')
     .then(response => response.json())
     .then(data => {
         // Process the fetched data and add it to the map
-        L.geoJSON(data).addTo(map);
+        L.geoJSON(data).addTo(themaLayer.borders);
     })
     .catch(error => console.error('Error fetching data:', error));
