@@ -95,7 +95,23 @@ fetch('zonierung_npht.json')
         // Process the fetched data and add it to the map
         L.geoJSON(data, {
           style: function (feature) {
-            
+            var lineName = feature.properties.ZONENAME;
+            var lineColor = "black";
+            if (lineName == "Kernzone") {
+              lineColor ="#3D9970";
+            } else if (lineName == "Aussenzone") {
+              lineColor ="#2ECC40";
+            } else if (lineName == "Sonderschutzgebiet") {
+              lineColor ="#FF851B";
+            } else {
+              //return sth
+            }
+            return {
+            color: lineColor,
+          };
+          },
+          oneEachFeature: function (feature, layer) {
+
           }
         }).addTo(themaLayer.zones);
     })
