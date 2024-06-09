@@ -76,6 +76,10 @@ fetch('npht_agrenze_new.geojson')
     .then(response => response.json())
     .then(data => {
         // Process the fetched data and add it to the map
-        L.geoJSON(data).addTo(themaLayer.borders);
+        L.geoJSON(data, {
+            style: {
+                color: 'green' // Change the color to blue
+            }
+        }).addTo(themaLayer.borders);
     })
     .catch(error => console.error('Error fetching data:', error));
