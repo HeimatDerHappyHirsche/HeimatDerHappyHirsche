@@ -1,0 +1,89 @@
+/* Nationalpark Hohe Tauern */
+
+
+//Großglockner Object
+var großglockner = {
+lat: 47.074531,
+lng: 12.6939,
+title: "Großglockner"
+};
+
+// Karte initialisieren
+var map = L.map("map").setView([stephansdom.lat, stephansdom.lng], 15);
+
+// BasemapAT Layer mit Leaflet provider plugin als startLayer Variable
+var startLayer = L.tileLayer.provider("BasemapAT.grau");
+startLayer.addTo(map);
+
+var themaLayer = {
+    sights: L.featureGroup().addTo(map),
+    lines: L.featureGroup().addTo(map),
+    stops: L.featureGroup().addTo(map),
+    zones: L.featureGroup().addTo(map),
+    //hotels: L.markerClusterGroup({ disableClusteringAtZoom: 17 }).addTo(map),
+  }
+  // Hintergrundlayer
+  L.control
+    .layers({
+      "BasemapAT Grau": startLayer,
+      "BasemapAT Standard": L.tileLayer.provider("BasemapAT.basemap"),
+      "BasemapAT High-DPI": L.tileLayer.provider("BasemapAT.highdpi"),
+      "BasemapAT Gelände": L.tileLayer.provider("BasemapAT.terrain"),
+      "BasemapAT Oberfläche": L.tileLayer.provider("BasemapAT.surface"),
+      "BasemapAT Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto"),
+      "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
+      "ESRI.NatGeoWorldMap": L.tileLayer.provider("Esri.NatGeoWorldMap"),
+    }, {
+      "Sehenswürdigkeiten": themaLayer.sights,
+      "Vienna Sightseeing Linien": themaLayer.lines,
+      "Vienna Sightseeing Haltestellen": themaLayer.stops,
+      "Fußgängerzonen": themaLayer.zones,
+      "Hotels und Unterkünfte": themaLayer.hotels,
+  
+    })
+    .addTo(map);
+
+// Maßstab
+L.control
+  .scale({
+    imperial: false,
+  })
+  .addTo(map);
+
+L.control
+  .fullscreen()
+  .addTo(map);
+
+
+
+async function loadSights(url) {
+    // console.log("Loading", url)
+    // var response = await fetch(url);
+    // var geojson = await response.json();
+    // console.log(geojson);
+    L.geoJSON(geojson, {
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: L.icon({
+            iconUrl: "icons/photo.png",
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -37],
+  
+          })
+        });
+      },
+      onEachFeature: function (feature, layer) {
+        console.log(feature);
+        console.log(feature.properties.NAME);
+        layer.bindPopup(`
+        <img src="${feature.properties.THUMBNAIL}" alt="*">
+       <h4><a href="${feature.properties.WEITERE_INF}"
+       target="wien">${feature.properties.NAME}</a></h4>
+       <adress>${feature.properties.ADRESSE}</adresse>
+        `)
+      }
+    }).addTo(themaLayer.sights);
+  }
+  
+  loadSights("https://data.wien.gv.at/daten/geo?service=WFS&request=GetFeature&version=1.1.0&typeName=ogdwien:SEHENSWUERDIGOGD&srsName=EPSG:4326&outputFormat=json")
+  
