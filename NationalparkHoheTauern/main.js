@@ -17,6 +17,7 @@ startLayer.addTo(map);
 
 var themaLayer = {
     borders: L.featureGroup().addTo(map),
+    zones: L.featureGroup().addTo(map),
     //hotels: L.markerClusterGroup({ disableClusteringAtZoom: 17 }).addTo(map),
   }
   // Hintergrundlayer
@@ -31,6 +32,7 @@ var themaLayer = {
       "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
     }, {
       "Nationalparkgrenzen": themaLayer.borders,
+      "Zonierung": themaLayer.zones,
     })
     .addTo(map);
 
@@ -81,5 +83,20 @@ fetch('npht_agrenze_new.geojson')
                 color: 'green' // Change the color to blue
             }
         }).addTo(themaLayer.borders);
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+
+//add Zones
+// Fetch JSON data from the local file
+fetch('zonierung_npht.json')
+    .then(response => response.json())
+    .then(data => {
+        // Process the fetched data and add it to the map
+        L.geoJSON(data, {
+          style: function (feature) {
+            
+          }
+        }).addTo(themaLayer.zones);
     })
     .catch(error => console.error('Error fetching data:', error));
