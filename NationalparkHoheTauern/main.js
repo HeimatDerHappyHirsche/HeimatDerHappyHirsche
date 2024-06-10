@@ -137,32 +137,26 @@ fetch('MoorBiotopeWGS84.geojson')
     L.geoJSON(data, {
       style: function (feature) {
         var lineName = feature.properties.MOORTYP;
-        var lineColor = "black"; // Change colors accordingly
+        var lineColor = "black"; // farben noch ändern
         if (lineName.includes("Kalk-Niedermoor")) {
           lineColor = "#3D9970";
-        } else if (lineName.includes("Kalk-Silikat-Niedermoor")) {
+        } else if  (lineName.includes("Kalk-Silikat-Niedermoor")) {
           lineColor = "#2ECC40";
-        } else if (lineName.includes("Silikat-Niedermoor")) {
+        } else if  (lineName.includes("Silikat-Niedermoor")) {
           lineColor = "#FF851B";
-        } else if (lineName.includes("Schwemmland")) {
-          lineColor = "#FF851B";
+        } else if  (lineName.includes("Schwemmland")) {
+          lineColor ="#FF851B";
         } else {
-          // Set default color or handle other cases
+          //return sth
         }
         return {
           color: lineColor,
         };
       },
       onEachFeature: function (feature, layer) {
-        // Attach click event to each feature
-        layer.on('click', function () {
-          if (feature.properties && feature.properties.KOMMENTAR) {
-            document.getElementById('comment').innerText = feature.properties.KOMMENTAR;
-          } else {
-            document.getElementById('comment').innerText = 'No comments available';
-          }
-        });
+        if (feature.properties && feature.properties.KOMMENTAR) {
+          layer.bindPopup(feature.properties.KOMMENTAR);
+        }
       }
     }).addTo(themaLayer.bogs);
-  })
-  .catch(error => console.error('Error fetching data:', error));
+  }).catch(error => console.error('Error fetching data:', error));
