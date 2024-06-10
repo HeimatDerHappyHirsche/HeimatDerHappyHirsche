@@ -16,8 +16,8 @@ var startLayer = L.tileLayer.provider("BasemapAT.grau");
 startLayer.addTo(map);
 
 var themaLayer = {
-  borders: L.featureGroup().addTo(map),
-  zones: L.featureGroup().addTo(map),
+  borders: L.featureGroup(),
+  zones: L.featureGroup(),
   bogs: L.featureGroup().addTo(map),
   //hotels: L.markerClusterGroup({ disableClusteringAtZoom: 17 }).addTo(map),
 }
@@ -65,9 +65,10 @@ let jsonPunkt = {
 L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
   return `
     <h2>${layer.feature.properties.name}</h2>
+    <h4>Der Großglockner ist mit einer Höhe von 3798 m ü. A. der höchste Berg Österreichs. Die markante Spitze aus Gesteinen der Grünschieferfazies gehört zur Glocknergruppe, einer Bergkette im mittleren Teil der Hohen Tauern, und gilt als einer der bedeutendsten Gipfel der Ostalpen.</h4>
     <ul> 
-        <li>Breite: ${layer.feature.geometry.coordinates[0]}</li>
-        <li>Länge: ${layer.feature.geometry.coordinates[1]}</li>
+        <li> geographische Breite: ${layer.feature.geometry.coordinates[0]}</li>
+        <li> geographische Länge: ${layer.feature.geometry.coordinates[1]}</li>
     </ul>
 `;
 }).addTo(map);
@@ -82,6 +83,14 @@ fetch('npht_agrenze_new.geojson')
     L.geoJSON(data, {
       style: {
         color: 'green' // Change the color to blue
+      },
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.NAME) {
+          layer.bindPopup(`
+          <h3>${feature.properties.NAME}</h3>
+          <h4>Der Nationalpark Hohe Tauern gehört zu den großartigsten Hochgebirgslandschaften der Erde. Die Höhenstufen von den Tälern bis zu den Gipfelregionen der Dreitausender stehen für einen außergewöhnlichen Artenreichtum. Hier leben viele Pflanzen und Wildtiere, die ursprünglich aus den zentralasiatischen Kältesteppen, aus der Arktis oder auch aus Südeuropa stammen. Unsere Aufgabe als Nationalpark ist dieses einzigartige Ökosystem zu schützen, zu erforschen und das Wissen an die nächsten Generationen weiterzugeben. Entdecken Sie diese faszinierende Wildnis mitten in Europa!</h4>
+        `)
+        }
       }
     }).addTo(themaLayer.borders);
   })
@@ -129,6 +138,60 @@ fetch('zonierung_npht.json')
   .catch(error => console.error('Error fetching data:', error));
 
 
+
+
+
+
+
+// Add Moore
+fetch('MoorBiotopeWGS84.geojson')
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: function (feature) {
+        var lineName = feature.properties.MOORTYP;
+        var lineColor = "black";
+        if (lineName.includes("Kalk-Niedermoor")) {
+          lineColor = "#3D9970";
+        } else if (lineName.includes("Kalk-Silikat-Niedermoor")) {
+          lineColor = "#2ECC40";
+        } else if (lineName.includes("Silikat-Niedermoor")) {
+          lineColor = "#FF851B";
+        } else if (lineName.includes("Schwemmland")) {
+          lineColor = "#FF851B";
+        }
+        return {
+          color: lineColor,
+        };
+      },
+      onEachFeature: function (feature, layer) {
+        {
+          if (feature.properties && feature.properties.KOMMENTAR) {
+            layer.bindPopup(`
+          <h4>${feature.properties.FONAME}</h4>
+          <h4>hier noch genauere Info zum Moor einfügen</h4>
+        `)
+          }
+        };
+        layer.on('click', function () {
+          if (feature.properties && feature.properties.KOMMENTAR && feature.properties.FONAME) {
+            document.getElementById('feature-name').innerText = feature.properties.FONAME;
+            document.getElementById('comment').innerText = feature.properties.KOMMENTAR;
+          } else {
+            document.getElementById('feature-name').innerText = 'No Feature Name';
+            document.getElementById('comment').innerText = 'No comments available';
+          }
+        });
+      }
+    }).addTo(themaLayer.bogs);
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
+
+
+
+
+/* 
 // Add Moore
 fetch('MoorBiotopeWGS84.geojson')
   .then(response => response.json())
@@ -155,8 +218,10 @@ fetch('MoorBiotopeWGS84.geojson')
       },
       onEachFeature: function (feature, layer) {
         if (feature.properties && feature.properties.KOMMENTAR) {
-          layer.bindPopup(feature.properties.KOMMENTAR);
-        }
+          layer.bindPopup(`
+          <h4>${feature.properties.FONAME}</h4>
+          feature.properties.KOMMENTAR;
+        `)}
       }
     }).addTo(themaLayer.bogs);
-  }).catch(error => console.error('Error fetching data:', error));
+  }).catch(error => console.error('Error fetching data:', error)); */
