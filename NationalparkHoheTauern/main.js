@@ -18,6 +18,7 @@ startLayer.addTo(map);
 var themaLayer = {
   borders: L.featureGroup().addTo(map),
   zones: L.featureGroup().addTo(map),
+  bogs: L.featureGroup().addTo(map),
   //hotels: L.markerClusterGroup({ disableClusteringAtZoom: 17 }).addTo(map),
 }
 // Hintergrundlayer
@@ -33,6 +34,7 @@ L.control
   }, {
     "Nationalparkgrenzen": themaLayer.borders,
     "Zonierung": themaLayer.zones,
+    "Moore": themaLayer.bogs,
   })
   .addTo(map);
 
@@ -72,7 +74,6 @@ L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
 
 
 //add Außengrenzen
-
 // Fetch JSON data from the local file
 fetch('npht_agrenze_new.geojson')
   .then(response => response.json())
@@ -124,5 +125,18 @@ fetch('zonierung_npht.json')
         layer.bindPopup(popupContent);
       }
     }).addTo(themaLayer.zones);
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
+
+  fetch('MoorBiotopeWGS84.geojson')
+  .then(response => response.json())
+  .then(data => {
+    // Process the fetched data and add it to the map
+    L.geoJSON(data, {
+      style: {
+        color: 'green' // Change the color to blue
+      }
+    }).addTo(themaLayer.borders);
   })
   .catch(error => console.error('Error fetching data:', error));
