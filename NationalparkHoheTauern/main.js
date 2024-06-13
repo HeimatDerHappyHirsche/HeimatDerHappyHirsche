@@ -234,7 +234,8 @@ fetch('MoorBiotopeWGS84.geojson')
 
 
 
-  // Fetch the GeoJSON data and add it to the map
+
+// Fetch the GeoJSON data and add it to the map --> Symbol noch ändern
 fetch('Gipfel3000.geojson')
 .then(response => response.json())
 .then(data => {
@@ -248,7 +249,7 @@ fetch('Gipfel3000.geojson')
       if (feature.properties && feature.properties.NAME) {
         layer.bindPopup(`
           <h3>${feature.properties.NAME}</h3>
-
+        //display sth interesting about the peak
         `);
       }
     }
