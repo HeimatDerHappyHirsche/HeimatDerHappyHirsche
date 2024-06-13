@@ -64,6 +64,16 @@ let jsonPunkt = {
 
   }
 };
+
+// Define  MiniMap
+var miniMap = new L.Control.MiniMap(
+  L.tileLayer.provider("BasemapAT.grau"), {
+    toggleDisplay: true,
+    minimized: false 
+  }
+).addTo(map);
+
+
 L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
   return `
     <h2>${layer.feature.properties.name}</h2>
