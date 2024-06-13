@@ -20,6 +20,7 @@ var themaLayer = {
   zones: L.featureGroup(),
   bogs: L.featureGroup(),
   glaciers: L.featureGroup().addTo(map),
+  peaks: L.featureGroup().addTo(map),
 }
 
 // Hintergrundlayer
@@ -37,6 +38,7 @@ L.control
     "Zonierung": themaLayer.zones,
     "Moore": themaLayer.bogs,
     "Gletscher (Stand 2015)": themaLayer.glaciers,
+    "Gipel über 3000m": themaLayer.peaks,
   })
   .addTo(map);
 
@@ -65,7 +67,7 @@ let jsonPunkt = {
   }
 };
 
-// Define  MiniMap
+// Define  MiniMap --> Vllt noch Basemap tauschen
 var miniMap = new L.Control.MiniMap(
   L.tileLayer.provider("BasemapAT.grau"), {
     toggleDisplay: true,
@@ -228,3 +230,28 @@ fetch('MoorBiotopeWGS84.geojson')
     }).addTo(themaLayer.glaciers);
   })
   .catch(error => console.error('Error fetching GeoJSON data:', error));
+
+
+
+
+  // Fetch the GeoJSON data and add it to the map
+fetch('Gipfel3000.geojson')
+.then(response => response.json())
+.then(data => {
+  // Create a GeoJSON layer and add it to the map
+  L.geoJSON(data, {
+    style: {
+      color: 'blue'
+    },
+    onEachFeature: function (feature, layer) {
+      // Check if the feature has properties and a name property
+      if (feature.properties && feature.properties.NAME) {
+        layer.bindPopup(`
+          <h3>${feature.properties.NAME}</h3>
+
+        `);
+      }
+    }
+  }).addTo(themaLayer.peaks);
+})
+.catch(error => console.error('Error fetching GeoJSON data:', error));
