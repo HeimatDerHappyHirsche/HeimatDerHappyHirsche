@@ -150,15 +150,15 @@ fetch('MoorBiotopeWGS84.geojson')
     L.geoJSON(data, {
       style: function (feature) {
         var lineName = feature.properties.MOORTYP;
-        var lineColor = "black";
+        var lineColor = "green";
         if (lineName.includes("Kalk-Niedermoor")) {
-          lineColor = "#3D9970";
-        } else if (lineName.includes("Kalk-Silikat-Niedermoor")) {
           lineColor = "#2ECC40";
+        } else if (lineName.includes("Kalk-Silikat-Niedermoor")) {
+          lineColor = "#3D9970";
         } else if (lineName.includes("Silikat-Niedermoor")) {
-          lineColor = "#FF851B";
+          lineColor = "#01FF70";
         } else if (lineName.includes("Schwemmland")) {
-          lineColor = "#FF851B";
+          lineColor = "#7FDBFF";
         }
         return {
           color: lineColor,
@@ -169,6 +169,10 @@ fetch('MoorBiotopeWGS84.geojson')
           if (feature.properties && feature.properties.KOMMENTAR) {
             layer.bindPopup(`
           <h4>${feature.properties.FONAME}</h4>
+          <ul>
+          <li>Moortyp:${feature.properties.MOORTYP}</li>
+          <li>Nutzung:${feature.properties.NUTZUNG}</li>
+          </ul>
           <h4>hier noch genauere Info zum Moor einfügen</h4>
         `)
           }
