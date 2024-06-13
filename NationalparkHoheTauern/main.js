@@ -18,9 +18,10 @@ startLayer.addTo(map);
 var themaLayer = {
   borders: L.featureGroup(),
   zones: L.featureGroup(),
-  bogs: L.featureGroup().addTo(map),
-  //hotels: L.markerClusterGroup({ disableClusteringAtZoom: 17 }).addTo(map),
+  bogs: L.featureGroup(),
+  glaciers: L.featureGroup().addTo(map),
 }
+
 // Hintergrundlayer
 L.control
   .layers({
@@ -35,6 +36,7 @@ L.control
     "Nationalparkgrenzen": themaLayer.borders,
     "Zonierung": themaLayer.zones,
     "Moore": themaLayer.bogs,
+    "Gletscher": themaLayer.glaciers,
   })
   .addTo(map);
 
@@ -195,37 +197,26 @@ fetch('MoorBiotopeWGS84.geojson')
 
 
 
-/* 
-// Add Moore
-fetch('MoorBiotopeWGS84.geojson')
+
+//Gletscherinventar
+// Fetch JSON data from the local file
+fetch('Gletscherinventar2015.geojson')
   .then(response => response.json())
   .then(data => {
     // Process the fetched data and add it to the map
     L.geoJSON(data, {
-      style: function (feature) {
-        var lineName = feature.properties.MOORTYP;
-        var lineColor = "black"; // farben noch ändern
-        if (lineName.includes("Kalk-Niedermoor")) {
-          lineColor = "#3D9970";
-        } else if  (lineName.includes("Kalk-Silikat-Niedermoor")) {
-          lineColor = "#2ECC40";
-        } else if  (lineName.includes("Silikat-Niedermoor")) {
-          lineColor = "#FF851B";
-        } else if  (lineName.includes("Schwemmland")) {
-          lineColor ="#FF851B";
-        } else {
-          //return sth
-        }
-        return {
-          color: lineColor,
-        };
+      style: {
+        color: 'blue' 
       },
       onEachFeature: function (feature, layer) {
-        if (feature.properties && feature.properties.KOMMENTAR) {
+        if (feature.properties && feature.properties.name) {
           layer.bindPopup(`
-          <h4>${feature.properties.FONAME}</h4>
-          feature.properties.KOMMENTAR;
-        `)}
+          <h3>${feature.properties.name}</h3>
+          <p>test</p>
+        `)
+        }
       }
-    }).addTo(themaLayer.bogs);
-  }).catch(error => console.error('Error fetching data:', error)); */
+    }).addTo(themaLayer.glaciers);
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
