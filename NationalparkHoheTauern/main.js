@@ -36,7 +36,7 @@ L.control
     "Nationalparkgrenzen": themaLayer.borders,
     "Zonierung": themaLayer.zones,
     "Moore": themaLayer.bogs,
-    "Gletscher": themaLayer.glaciers,
+    "Gletscher (Stand 2015)": themaLayer.glaciers,
   })
   .addTo(map);
 
@@ -196,27 +196,25 @@ fetch('MoorBiotopeWGS84.geojson')
 
 
 
-
-
-//Gletscherinventar
-// Fetch JSON data from the local file
-fetch('Gletscherinventar2015.geojson')
+ 
+  fetch('Gletscherinventar2015.geojson')
   .then(response => response.json())
   .then(data => {
-    // Process the fetched data and add it to the map
+    // Create a GeoJSON layer and add it to the map
     L.geoJSON(data, {
       style: {
-        color: 'blue' 
+        color: 'blue'
       },
       onEachFeature: function (feature, layer) {
+        // Check if the feature has properties and a name property
         if (feature.properties && feature.properties.name) {
+          var areaInKM2 = feature.properties.Shape_Area.toFixed(0);
           layer.bindPopup(`
           <h3>${feature.properties.name}</h3>
-          <p>test</p>
-        `)
+          <p>Fläche (2015): ${areaInKM2} m²</p>
+          `);
         }
       }
     }).addTo(themaLayer.glaciers);
   })
-  .catch(error => console.error('Error fetching data:', error));
-
+  .catch(error => console.error('Error fetching GeoJSON data:', error));
