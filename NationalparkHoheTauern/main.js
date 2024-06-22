@@ -228,6 +228,40 @@ fetch('MoorBiotopeWGS84.geojson')
   .catch(error => console.error('Error fetching GeoJSON data:', error));
 
 
+//Gipfel über 3000m
+fetch('Gipfel3000.geojson')
+  .then(response => response.json())
+  .then(data => {
+    // Create a GeoJSON layer and add it to the map
+    L.geoJSON(data, {
+      pointToLayer: function (feature, latlng) {
+        // Create a marker with the Font Awesome mountain icon
+        const mountainIcon = L.divIcon({
+          html: '<i class="fa-solid fa-mountain" style="font-size:24px;color: #111111;"></i>',
+          className: 'custom-div-icon', // class name for styling purposes
+          iconSize: [24, 24], // size of the icon
+          iconAnchor: [12, 24], // point of the icon which will correspond to marker's location
+          popupAnchor: [0, -24] // point from which the popup should open relative to the iconAnchor
+        });
+
+        return L.marker(latlng, { icon: mountainIcon });
+      },
+      onEachFeature: function (feature, layer) {
+        // Check if the feature has properties and a name property
+        if (feature.properties && feature.properties.NAME) {
+          layer.bindPopup(`
+            <h3>${feature.properties.NAME}</h3>
+            <p> Höhe: ${feature.properties.HOEHE} Meter über Adria</p> 
+          `);
+        }
+      }
+    }).addTo(themaLayer.peaks);
+  })
+  .catch(error => console.error('Error fetching GeoJSON data:', error));
+
+
+
+
 
 
 //Bedeutende Gipfel
