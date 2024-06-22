@@ -20,7 +20,7 @@ var themaLayer = {
   zones: L.featureGroup(),
   bogs: L.featureGroup(),
   glaciers: L.featureGroup(),
-  peaks: L.markerClusterGroup({disableClusteringAtZoom: 17}),
+  peaks: L.markerClusterGroup({ disableClusteringAtZoom: 17 }),
   peaks_important: L.featureGroup(),
 }
 
@@ -72,9 +72,9 @@ let jsonPunkt = {
 // Define  MiniMap --> Vllt noch Basemap tauschen
 var miniMap = new L.Control.MiniMap(
   L.tileLayer.provider("BasemapAT.grau"), {
-    toggleDisplay: true,
-    minimized: false 
-  }
+  toggleDisplay: true,
+  minimized: false
+}
 ).addTo(map);
 
 
@@ -204,8 +204,8 @@ fetch('MoorBiotopeWGS84.geojson')
 
 
 
- 
-  fetch('Gletscherinventar2015.geojson')
+
+fetch('Gletscherinventar2015.geojson')
   .then(response => response.json())
   .then(data => {
     // Create a GeoJSON layer and add it to the map
@@ -289,7 +289,7 @@ fetch('Gipfel_Bedeutend.geojson')
             <h3>${feature.properties.NAME}</h3>
           `);
 
-          layer.on('click', function() {
+          layer.on('click', function () {
             const peakName = feature.properties.NAME;
             fetchWikipediaContent(peakName);
           });
