@@ -19,8 +19,9 @@ var themaLayer = {
   borders: L.featureGroup(),
   zones: L.featureGroup(),
   bogs: L.featureGroup(),
-  glaciers: L.featureGroup().addTo(map),
-  peaks: L.featureGroup().addTo(map),
+  glaciers: L.featureGroup(),
+  peaks: L.markerClusterGroup({disableClusteringAtZoom: 17}).addTo(map),
+  peaks_important: L.featureGroup(),
 }
 
 // Hintergrundlayer
@@ -39,6 +40,7 @@ L.control
     "Moore": themaLayer.bogs,
     "Gletscher (Stand 2015)": themaLayer.glaciers,
     "Gipfel über 3000m": themaLayer.peaks,
+    "Bedeutende Gipfel": themaLayer.peaks_important,
   })
   .addTo(map);
 
@@ -76,16 +78,16 @@ var miniMap = new L.Control.MiniMap(
 ).addTo(map);
 
 
-L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
-  return `
-    <h2>${layer.feature.properties.name}</h2>
-    <h4>Der Großglockner ist mit einer Höhe von 3798 m ü. A. der höchste Berg Österreichs. Die markante Spitze aus Gesteinen der Grünschieferfazies gehört zur Glocknergruppe, einer Bergkette im mittleren Teil der Hohen Tauern, und gilt als einer der bedeutendsten Gipfel der Ostalpen.</h4>
-    <ul> 
-        <li> geographische Breite: ${layer.feature.geometry.coordinates[0]}</li>
-        <li> geographische Länge: ${layer.feature.geometry.coordinates[1]}</li>
-    </ul>
-`;
-}).addTo(map);
+// L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
+//   return `
+//     <h2>${layer.feature.properties.name}</h2>
+//     <h4>Der Großglockner ist mit einer Höhe von 3798 m ü. A. der höchste Berg Österreichs. Die markante Spitze aus Gesteinen der Grünschieferfazies gehört zur Glocknergruppe, einer Bergkette im mittleren Teil der Hohen Tauern, und gilt als einer der bedeutendsten Gipfel der Ostalpen.</h4>
+//     <ul> 
+//         <li> geographische Breite: ${layer.feature.geometry.coordinates[0]}</li>
+//         <li> geographische Länge: ${layer.feature.geometry.coordinates[1]}</li>
+//     </ul>
+// `;
+// }).addTo(map);
 
 
 //add Außengrenzen
@@ -187,7 +189,6 @@ fetch('MoorBiotopeWGS84.geojson')
           <li>Moortyp:${feature.properties.MOORTYP}</li>
           <li>Nutzung:${feature.properties.NUTZUNG}</li>
           </ul>
-          <h4>hier noch genauere Info zum Moor einfügen</h4>
         `)
           }
         };
@@ -235,8 +236,7 @@ fetch('MoorBiotopeWGS84.geojson')
 
 
 
-// Fetch the GeoJSON data and add it to the map --> Symbol noch ändern
-// Fetch the GeoJSON data and add it to the map
+//Gipfel über 3000
 fetch('Gipfel3000.geojson')
   .then(response => response.json())
   .then(data => {
@@ -264,5 +264,36 @@ fetch('Gipfel3000.geojson')
         }
       }
     }).addTo(themaLayer.peaks);
+  })
+  .catch(error => console.error('Error fetching GeoJSON data:', error));
+
+
+  fetch('Gipfel_Bedeutend.geojson')
+  .then(response => response.json())
+  .then(data => {
+    // Create a GeoJSON layer and add it to the map
+    L.geoJSON(data, {
+      pointToLayer: function (feature, latlng) {
+        // Create a marker with the Font Awesome mountain icon
+        const mountainIcon = L.divIcon({
+          html: '<i class="fa-solid fa-mountain" style="font-size:24px;color: #111111;"></i>',
+          className: 'custom-div-icon', // class name for styling purposes
+          iconSize: [24, 24], // size of the icon
+          iconAnchor: [12, 24], // point of the icon which will correspond to marker's location
+          popupAnchor: [0, -24] // point from which the popup should open relative to the iconAnchor
+        });
+
+        return L.marker(latlng, { icon: mountainIcon });
+      },
+      onEachFeature: function (feature, layer) {
+        // Check if the feature has properties and a name property
+        if (feature.properties && feature.properties.NAME) {
+          layer.bindPopup(`
+            <h3>${feature.properties.NAME}</h3>
+            <p> Höhe: ${feature.properties.HOEHE} Meter über Adria</p> 
+          `);
+        }
+      }
+    }).addTo(themaLayer.peaks_important);
   })
   .catch(error => console.error('Error fetching GeoJSON data:', error));
