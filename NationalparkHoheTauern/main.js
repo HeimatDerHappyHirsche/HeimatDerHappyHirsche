@@ -20,8 +20,8 @@ var themaLayer = {
   zones: L.featureGroup(),
   bogs: L.featureGroup(),
   glaciers: L.featureGroup(),
-  peaks: L.markerClusterGroup({disableClusteringAtZoom: 17}).addTo(map),
-  peaks_important: L.featureGroup(),
+  peaks: L.markerClusterGroup({disableClusteringAtZoom: 17}),
+  peaks_important: L.featureGroup().addTo(map),
 }
 
 // Hintergrundlayer
@@ -154,11 +154,6 @@ fetch('zonierung_npht.json')
   .catch(error => console.error('Error fetching data:', error));
 
 
-
-
-
-
-
 // Add Moore
 fetch('MoorBiotopeWGS84.geojson')
   .then(response => response.json())
@@ -235,9 +230,8 @@ fetch('MoorBiotopeWGS84.geojson')
 
 
 
-
-//Gipfel über 3000
-fetch('Gipfel3000.geojson')
+//Bedeutende Gipfel
+fetch('Gipfel_Bedeutend.geojson')
   .then(response => response.json())
   .then(data => {
     // Create a GeoJSON layer and add it to the map
@@ -245,7 +239,7 @@ fetch('Gipfel3000.geojson')
       pointToLayer: function (feature, latlng) {
         // Create a marker with the Font Awesome mountain icon
         const mountainIcon = L.divIcon({
-          html: '<i class="fa-solid fa-mountain" style="font-size:24px;color: #111111;"></i>',
+          html: '<i class="fa-solid fa-mountain" style="font-size:24px;color:#111111;"></i>',
           className: 'custom-div-icon', // class name for styling purposes
           iconSize: [24, 24], // size of the icon
           iconAnchor: [12, 24], // point of the icon which will correspond to marker's location
@@ -259,41 +253,43 @@ fetch('Gipfel3000.geojson')
         if (feature.properties && feature.properties.NAME) {
           layer.bindPopup(`
             <h3>${feature.properties.NAME}</h3>
-            <p> Höhe: ${feature.properties.HOEHE} Meter über Adria</p> 
           `);
-        }
-      }
-    }).addTo(themaLayer.peaks);
-  })
-  .catch(error => console.error('Error fetching GeoJSON data:', error));
 
-
-  fetch('Gipfel_Bedeutend.geojson')
-  .then(response => response.json())
-  .then(data => {
-    // Create a GeoJSON layer and add it to the map
-    L.geoJSON(data, {
-      pointToLayer: function (feature, latlng) {
-        // Create a marker with the Font Awesome mountain icon
-        const mountainIcon = L.divIcon({
-          html: '<i class="fa-solid fa-mountain" style="font-size:24px;color: #111111;"></i>',
-          className: 'custom-div-icon', // class name for styling purposes
-          iconSize: [24, 24], // size of the icon
-          iconAnchor: [12, 24], // point of the icon which will correspond to marker's location
-          popupAnchor: [0, -24] // point from which the popup should open relative to the iconAnchor
-        });
-
-        return L.marker(latlng, { icon: mountainIcon });
-      },
-      onEachFeature: function (feature, layer) {
-        // Check if the feature has properties and a name property
-        if (feature.properties && feature.properties.NAME) {
-          layer.bindPopup(`
-            <h3>${feature.properties.NAME}</h3>
-            <p> Höhe: ${feature.properties.HOEHE} Meter über Adria</p> 
-          `);
+          layer.on('click', function() {
+            const peakName = feature.properties.NAME;
+            fetchWikipediaContent(peakName);
+          });
         }
       }
     }).addTo(themaLayer.peaks_important);
   })
   .catch(error => console.error('Error fetching GeoJSON data:', error));
+
+// Function to fetch Wikipedia content in German with text breaks
+function fetchWikipediaContent(peakName) {
+  const url = `https://de.wikipedia.org/w/api.php?action=query&origin=*&format=json&prop=extracts&titles=${encodeURIComponent(peakName)}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const pages = data.query.pages;
+      const pageId = Object.keys(pages)[0];
+      const extract = pages[pageId].extract;
+      const pageUrl = `https://de.wikipedia.org/wiki/${encodeURIComponent(peakName)}`;
+
+      if (extract) {
+        document.getElementById('wikipedia-content').innerHTML = `
+          <h3>${peakName}</h3>
+          ${extract}
+        <p>Quelle: <a href="${pageUrl}" target="_blank">${pageUrl}</a></p>
+        `;
+      } else {
+        document.getElementById('wikipedia-content').innerHTML = `
+          <h3>${peakName}</h3>
+          <p>Keine Wikipedia-Informationen verfügbar</p>
+          <p>Quelle: <a href="${pageUrl}" target="_blank">${pageUrl}</a></p>
+        `;
+      }
+    })
+    .catch(error => console.error('Error fetching Wikipedia content:', error));
+}
