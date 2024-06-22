@@ -16,12 +16,12 @@ var startLayer = L.tileLayer.provider("BasemapAT.grau");
 startLayer.addTo(map);
 
 var themaLayer = {
-  borders: L.featureGroup(),
+  borders: L.featureGroup().addTo(map),
   zones: L.featureGroup(),
   bogs: L.featureGroup(),
   glaciers: L.featureGroup(),
   peaks: L.markerClusterGroup({disableClusteringAtZoom: 17}),
-  peaks_important: L.featureGroup().addTo(map),
+  peaks_important: L.featureGroup(),
 }
 
 // Hintergrundlayer
@@ -142,7 +142,7 @@ fetch('zonierung_npht.json')
         if (feature.properties.ZONENAME === "Kernzone") {
           popupContent = "<h3>Kernzone</h3><p>Weitgehend ungestört, aber für sanften Tourismus und Bildungszwecke zugänglich. Ziel ist der Erhalt natürlicher Prozesse ohne intensive menschliche Eingriffe.</p>";
         } else if (feature.properties.ZONENAME === "Aussenzone") {
-          popupContent = "<h3>Aussenzone</h3><p>Niedrigster Schutzstatus, erlaubt nachhaltige Nutzungen und menschliche Aktivitäten, dient als Pufferzone..</p>";
+          popupContent = "<h3>Aussenzone</h3><p>Niedrigster Schutzstatus, erlaubt nachhaltige Nutzungen und menschliche Aktivitäten, dient als Pufferzone.</p>";
         } else if (feature.properties.ZONENAME === "Sonderschutzgebiet") {
           popupContent = "<h3>Sonderschutzgebiet</h3><p>Streng geschützt und in der Regel für die Öffentlichkeit gesperrt. Ziel ist der Schutz besonders sensibler und wertvoller Naturräume ohne jegliche menschliche Beeinflussung.</p>";
         }
