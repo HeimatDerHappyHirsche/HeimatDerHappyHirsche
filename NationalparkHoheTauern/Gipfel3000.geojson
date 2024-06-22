@@ -3824,37 +3824,6 @@
         {
             "type": "Feature",
             "properties": {
-                "fid": 287.0,
-                "F_CODE": 7302.0,
-                "F_NAME": "Berggipfel",
-                "BEDEUTUNG": "Gering bedeutend",
-                "NAME": "Leutachkopf",
-                "VAR_NAME": null,
-                "HOEHE": 9999.0,
-                "EA_LAGE": "Landesaufnahme",
-                "EA_HOEHE": null,
-                "ERSTELLDAT": "2014-08-20",
-                "BEARBDAT": "2014-08-20",
-                "OBJECTID": 14198.0,
-                "GLOBALID": "{4096476B-F391-40FC-9CF0-3E4A897AF39F}"
-            },
-            "bbox": [
-                12.29797,
-                47.21748,
-                12.29797,
-                47.21748
-            ],
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    12.29797,
-                    47.21748
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "fid": 358.0,
                 "F_CODE": 7302.0,
                 "F_NAME": "Berggipfel",
