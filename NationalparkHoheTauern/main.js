@@ -38,7 +38,7 @@ L.control
     "Zonierung": themaLayer.zones,
     "Moore": themaLayer.bogs,
     "Gletscher (Stand 2015)": themaLayer.glaciers,
-    "Gipel über 3000m": themaLayer.peaks,
+    "Gipfel über 3000m": themaLayer.peaks,
   })
   .addTo(map);
 
@@ -236,23 +236,33 @@ fetch('MoorBiotopeWGS84.geojson')
 
 
 // Fetch the GeoJSON data and add it to the map --> Symbol noch ändern
+// Fetch the GeoJSON data and add it to the map
 fetch('Gipfel3000.geojson')
-.then(response => response.json())
-.then(data => {
-  // Create a GeoJSON layer and add it to the map
-  L.geoJSON(data, {
-    style: {
-      color: 'blue'
-    },
-    onEachFeature: function (feature, layer) {
-      // Check if the feature has properties and a name property
-      if (feature.properties && feature.properties.NAME) {
-        layer.bindPopup(`
-          <h3>${feature.properties.NAME}</h3>
-        //display sth interesting about the peak
-        `);
+  .then(response => response.json())
+  .then(data => {
+    // Create a GeoJSON layer and add it to the map
+    L.geoJSON(data, {
+      pointToLayer: function (feature, latlng) {
+        // Create a marker with the Font Awesome mountain icon
+        const mountainIcon = L.divIcon({
+          html: '<i class="fa-solid fa-mountain" style="font-size:24px;color: #111111;"></i>',
+          className: 'custom-div-icon', // class name for styling purposes
+          iconSize: [24, 24], // size of the icon
+          iconAnchor: [12, 24], // point of the icon which will correspond to marker's location
+          popupAnchor: [0, -24] // point from which the popup should open relative to the iconAnchor
+        });
+
+        return L.marker(latlng, { icon: mountainIcon });
+      },
+      onEachFeature: function (feature, layer) {
+        // Check if the feature has properties and a name property
+        if (feature.properties && feature.properties.NAME) {
+          layer.bindPopup(`
+            <h3>${feature.properties.NAME}</h3>
+            <p> Höhe: ${feature.properties.HOEHE} Meter über Adria</p> 
+          `);
+        }
       }
-    }
-  }).addTo(themaLayer.peaks);
-})
-.catch(error => console.error('Error fetching GeoJSON data:', error));
+    }).addTo(themaLayer.peaks);
+  })
+  .catch(error => console.error('Error fetching GeoJSON data:', error));
