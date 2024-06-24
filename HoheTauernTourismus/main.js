@@ -29,7 +29,6 @@ L.control
         "BasemapAT Standard": L.tileLayer.provider("BasemapAT.basemap"),
         "BasemapAT High-DPI": L.tileLayer.provider("BasemapAT.highdpi"),
         "BasemapAT Gelände": L.tileLayer.provider("BasemapAT.terrain"),
-        "BasemapAT Oberfläche": L.tileLayer.provider("BasemapAT.surface"),
         "BasemapAT Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto"),
         "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
     },
@@ -71,13 +70,24 @@ new L.Control.MiniMap(
 }
 ).addTo(map);
 
-let lng = `Almenzentren${feature.geometry.coordinates[0]}`,
-    lat = `Almenzentren${feature.geometry.coordinates[1]}`;
+fetch('NationalparkHoheTauern/npht_agrenze_new.geojson')
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: 'green'
+      },
+    }).addTo(themaLayer.borders);
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
+let lng = `Almenzentren.geojson${features.geometry.coordinates[1]}`,
+    lat = `Almenzentren.geojson${features.geometry.coordinates[0]}`;
 
 fetch('Almzentren.geojson')
   .then(response => response.json())
-  .then(geojson => {
-    L.geoJSON(geojson, {
+  .then(data => {
+    L.geoJSON(data, {
       pointToLayer: function (feature, latlng) {
         return L.marker(latlng, {
           icon: L.icon({
@@ -87,7 +97,7 @@ fetch('Almzentren.geojson')
       },
       onEachFeature: function (feature, layer) {
         layer.bindPopup(`
-          <h4>${feature.properties.NAME}</h4>
+          <h4>${features.properties.NAME}</h4>
         `);
       }
     }).addTo(themaLayer.hut);
