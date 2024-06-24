@@ -18,6 +18,7 @@ startLayer.addTo(map);
 
 var themaLayer = {
     borders: L.featureGroup().addTo(map),
+    routen: L.featureGroup().addTo(map),
 }
 
 L.control
@@ -32,6 +33,7 @@ L.control
     },
         {
             "Nationalparkgrenzen": themaLayer.borders,
+            "GPX-Routen": themaLayer.routen.addTo(map)
         })
     .addTo(map);
 
