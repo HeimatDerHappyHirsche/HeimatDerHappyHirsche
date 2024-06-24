@@ -19,6 +19,8 @@ startLayer.addTo(map);
 var themaLayer = {
     borders: L.featureGroup().addTo(map),
     routen: L.featureGroup().addTo(map),
+    POI: L.featureGroup().addTo(map),
+    hut: L.featureGroup().addTo(map),
 }
 
 L.control
@@ -32,8 +34,9 @@ L.control
         "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
     },
         {
-            "Nationalparkgrenzen": themaLayer.borders,
-            "GPX-Routen": themaLayer.routen.addTo(map)
+            "Nationalparkgrenzen": themaLayer.borders.addTo(map),
+            "GPX-Routen": themaLayer.routen.addTo(map),
+            "Almen": themaLayer.hut.addTo(map),
         })
     .addTo(map);
 
@@ -42,24 +45,24 @@ L.control.scale({
     imperial: false,
 }).addTo(map);
 
-let controlElevation = L.control.elevation({
-    time: false,
+/*let controlElevation = L.control.elevation({
+   time: false,
     elevationDiv: "#profile",
     height: 300,
-    theme: "bike-tirol",
+    theme: "trail-HoheTauern",
 }).addTo(map);
-controlElevation.load("data/etappe18.gpx");
+controlElevation.load("HoheTauernTourismus/grossglockner_a");
 
 let pulldown = document.querySelector("#pulldown");
 
-for (let etappe of ETAPPEN) {
+for (let tour of TOUREN) {
     let status = "";
-    if (etappe.nr == 18) {
+    if (tour.nr == 1) {
         status = "selected";
     }
-    pulldown.innerHTML += `<option ${status} value="${etappe.user}">Etappe ${etappe.nr}: ${etappe.titel}</option>`;
+    pulldown.innerHTML += `<option ${status}>Etappe ${tour.nr}: ${tour.titel}</option>`;
 }
-
+*/
 new L.Control.MiniMap(
     L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
         attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
@@ -67,3 +70,30 @@ new L.Control.MiniMap(
     toggleDisplay: true,
 }
 ).addTo(map);
+
+let lng = `Almenzentren${feature.geometry.coordinates[0]}`,
+    lat = `Almenzentren${feature.geometry.coordinates[1]}`;
+
+fetch('Almzentren.geojson')
+  .then(response => response.json())
+  .then(geojson => {
+    L.geoJSON(geojson, {
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: L.icon({
+            iconUrl: 'icons/hut.png',
+          })
+        });
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(`
+          <h4>${feature.properties.NAME}</h4>
+        `);
+      }
+    }).addTo(themaLayer.hut);
+  })
+  .catch(error => {
+    console.error('Error loading the GeoJSON data:', error);
+  });
+
+
