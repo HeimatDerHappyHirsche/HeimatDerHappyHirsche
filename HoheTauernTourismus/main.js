@@ -33,8 +33,8 @@ L.control
         "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
     },
         {
-            "Nationalparkgrenzen": themaLayer.borders.addTo(map),
-            "GPX-Routen": themaLayer.routen.addTo(map),
+            "Nationalparkgrenze": themaLayer.borders.addTo(map),
+            "Wandertouren": themaLayer.routen.addTo(map),
             "Almen": themaLayer.hut.addTo(map),
         })
     .addTo(map);
