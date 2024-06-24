@@ -6,7 +6,11 @@ var großglockner = {
 };
 
 // Karte initialisieren
-var map = L.map("map").setView([großglockner.lat, großglockner.lng], 10);
+var map = L.map('map', {
+    fullscreenControl: true,
+    }
+).setView([großglockner.lat, großglockner.lng], 10);
+
 
 // BasemapAT Layer mit Leaflet provider plugin als startLayer Variable
 var startLayer = L.tileLayer.provider("BasemapAT.grau");
