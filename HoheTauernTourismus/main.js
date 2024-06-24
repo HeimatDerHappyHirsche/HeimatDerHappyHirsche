@@ -8,7 +8,7 @@ var großglockner = {
 // Karte initialisieren
 var map = L.map('map', {
     fullscreenControl: true,
-    }
+}
 ).setView([großglockner.lat, großglockner.lng], 10);
 
 
@@ -34,3 +34,16 @@ L.control
             "Nationalparkgrenzen": themaLayer.borders,
         })
     .addTo(map);
+
+// Maßstab
+L.control.scale({
+    imperial: false,
+}).addTo(map);
+
+new L.Control.MiniMap(
+    L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
+        attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
+    }), {
+    toggleDisplay: true,
+}
+).addTo(map);
