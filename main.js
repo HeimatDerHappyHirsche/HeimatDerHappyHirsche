@@ -129,7 +129,7 @@ nationalParks.forEach(park => {
         popupContent.appendChild(tourismLink);
 
         let natureLink = document.createElement('p');
-        natureLink.innerHTML = `Die Schönheit der Natur im Nationalpark erleben: <a href="${park.natureLink}" target="_blank">Nationalpark Hohe Tauern - Schönheit der Natur</a>`;
+        natureLink.innerHTML = `Die Schönheit der Natur im Nationalpark erleben: <a href="${park.natureLink}" target="_blank">Nationalpark Hohe Tauern - Ökologie und Geographie</a>`;
         popupContent.appendChild(natureLink);
     }
 
