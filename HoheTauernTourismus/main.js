@@ -135,11 +135,9 @@ loadGPX('Daten/kreuzeckhoehenweg_etappe1.gpx');
     }).addTo(themaLayer.borders);
   })
   .catch(error => console.error('Error fetching data:', error));
+*/
 
-var lng = `Almenzentren.geojson${features.geometry.coordinates[0]}`,
-    lat = `Almenzentren.geojson${features.geometry.coordinates[1]}`;
-
-fetch(`Almzentren.geojson`)
+fetch("Daten/Almzentren.json")
   .then(response => response.json())
   .then(data => {
     L.geoJSON(data, {
@@ -152,15 +150,15 @@ fetch(`Almzentren.geojson`)
       },
       onEachFeature: function (feature, layer) {
         layer.bindPopup(`
-          <h4>${features.properties.NAME}</h4>
+          <h4>${feature.properties.NAME}</h4>
         `);
       }
     }).addTo(themaLayer.hut);
   })
   .catch(error => {
-    console.error('Error loading the GeoJSON data:', error);
+    console.error('Error loading the JSON data:', error);
   });
-*/
+
 
 
 
