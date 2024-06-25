@@ -19,7 +19,7 @@ startLayer.addTo(map);
 let themaLayer = {
   borders: L.featureGroup().addTo(map),
   poi: L.featureGroup().addTo(map),
-  hut: L.featureGroup().addTo(map),
+  hut: L.markerClusterGroup({ disableClusteringAtZoom: 17 }),
 }
 
 L.control
@@ -69,12 +69,13 @@ new L.Control.MiniMap(
 }
 ).addTo(map);
 
-let controlElevation = L.control.elevation({
+var controlElevation = L.control.elevation({
   time: false,
   elevationDiv: "#profile",
   height: 200,
 }).addTo(map);
 controlElevation.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
+
 
 /*let pulldown = document.querySelector("#pulldown");
 
@@ -94,7 +95,7 @@ pulldown.onchange = function (evt) {
 */
 
 // Variable für den aktuellen GPX-Layer
-let currentGPXLayer;
+/*let currentGPXLayer;
 
 // Funktion zum Laden einer GPX-Datei
 function loadGPX(gpxData) {
@@ -126,9 +127,21 @@ function loadGPX(gpxData) {
     .catch(error => console.error('Error loading GPX file:', error));
 }
 console.log(4);
-
+*/
 // Lade die erste Etappe standardmäßig
-loadGPX('Daten/kreuzeckhoehenweg_etappe1.gpx');
+
+
+
+fetch("Daten/kreuzeckhoehenweg_etappe1.gpx")
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: 'green'
+      },
+    }).addTo(themaLayer.borders);
+  })
+  .catch(error => console.error('Error fetching data:', error))
 
 fetch("../NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
@@ -163,6 +176,10 @@ fetch("Daten/Almzentren.json")
     console.error('Error loading the JSON data:', error);
   });
 
+
+  var markers = L.markerClusterGroup({
+      disableClusteringAtZoom: 17
+  });
 
 fetch("Daten/NPHT_POI.json")
   .then(response => response.json())
