@@ -78,6 +78,14 @@ controlElevation.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
 
 let pulldown = document.querySelector("#pulldown");
 
+for (let etappe of ETAPPEN) {
+  let status = "";
+  if (etappe.nr == 1) {
+      status = "selected";
+  }
+  pulldown.innerHTML += `<option ${status} value="${etappe.start}">Etappe ${etappe.nr}: ${etappe.titel}</option>`;
+}
+
 /*fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
   .then(data => {
