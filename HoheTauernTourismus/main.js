@@ -1,13 +1,13 @@
 //Punkt definieren
 var großglockner = {
-    lat: 47.074531,
-    lng: 12.6939,
-    title: "Großglockner"
+  lat: 47.074531,
+  lng: 12.6939,
+  title: "Großglockner"
 };
 
 // Karte initialisieren
 var map = L.map('map', {
-    fullscreenControl: true,
+  fullscreenControl: true,
 }
 ).setView([großglockner.lat, großglockner.lng], 10);
 
@@ -17,30 +17,30 @@ var startLayer = L.tileLayer.provider("BasemapAT.grau");
 startLayer.addTo(map);
 
 let themaLayer = {
-    borders: L.featureGroup().addTo(map),
-    routen: L.featureGroup().addTo(map),
-    hut: L.featureGroup().addTo(map),
+  borders: L.featureGroup().addTo(map),
+  poi: L.featureGroup().addTo(map),
+  hut: L.featureGroup().addTo(map),
 }
 
 L.control
-    .layers({
-        "BasemapAT Grau": startLayer,
-        "BasemapAT Standard": L.tileLayer.provider("BasemapAT.basemap"),
-        "BasemapAT High-DPI": L.tileLayer.provider("BasemapAT.highdpi"),
-        "BasemapAT Gelände": L.tileLayer.provider("BasemapAT.terrain"),
-        "BasemapAT Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto"),
-        "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
-    },
-        {
-            "Nationalparkgrenze": themaLayer.borders.addTo(map),
-            "Wandertouren": themaLayer.routen.addTo(map),
-            "Almen": themaLayer.hut.addTo(map),
-        })
-    .addTo(map);
+  .layers({
+    "BasemapAT Grau": startLayer,
+    "BasemapAT Standard": L.tileLayer.provider("BasemapAT.basemap"),
+    "BasemapAT High-DPI": L.tileLayer.provider("BasemapAT.highdpi"),
+    "BasemapAT Gelände": L.tileLayer.provider("BasemapAT.terrain"),
+    "BasemapAT Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto"),
+    "BasemapAT Beschriftung": L.tileLayer.provider("BasemapAT.overlay"),
+  },
+    {
+      "Nationalparkgrenze": themaLayer.borders.addTo(map),
+      "Points of interest": themaLayer.poi.addTo(map),
+      "Almen": themaLayer.hut.addTo(map),
+    })
+  .addTo(map);
 
 // Maßstab
 L.control.scale({
-    imperial: false,
+  imperial: false,
 }).addTo(map);
 
 /*let controlElevation = L.control.elevation({
@@ -62,17 +62,17 @@ for (let tour of TOUREN) {
 }
 */
 new L.Control.MiniMap(
-    L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
-        attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
-    }), {
-    toggleDisplay: true,
+  L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
+    attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
+  }), {
+  toggleDisplay: true,
 }
 ).addTo(map);
- 
-  let controlElevation = L.control.elevation({
-    time: false,
-    elevationDiv: "#profile",
-    height: 200,
+
+let controlElevation = L.control.elevation({
+  time: false,
+  elevationDiv: "#profile",
+  height: 200,
 }).addTo(map);
 controlElevation.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
 
@@ -109,23 +109,28 @@ function loadGPX(gpxData) {
       currentGPXLayer = new L.Layer(gpxData, {
         async: true
       });
+      console.log(1);
 
-      currentGPXLayer.on('loaded', function(e) {
+      currentGPXLayer.on('loaded', function (e) {
         map.fitBounds(e.target.getBounds());
       });
-
-      currentGPXLayer.on('addline', function(e) {
+      console.log(2);
+      currentGPXLayer.on('addline', function (e) {
         controlElevation.addData(e.line);
       });
+      console.log(3);
+      
 
-      currentGPXLayer.addTo(map);
+      
     })
     .catch(error => console.error('Error loading GPX file:', error));
 }
+console.log(4);
+
 // Lade die erste Etappe standardmäßig
 loadGPX('Daten/kreuzeckhoehenweg_etappe1.gpx');
 
-/*fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
+fetch("../NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
   .then(data => {
     L.geoJSON(data, {
@@ -135,7 +140,6 @@ loadGPX('Daten/kreuzeckhoehenweg_etappe1.gpx');
     }).addTo(themaLayer.borders);
   })
   .catch(error => console.error('Error fetching data:', error));
-*/
 
 fetch("Daten/Almzentren.json")
   .then(response => response.json())
@@ -158,6 +162,30 @@ fetch("Daten/Almzentren.json")
   .catch(error => {
     console.error('Error loading the JSON data:', error);
   });
+
+
+fetch("Daten/NPHT_POI.json")
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: L.icon({
+            iconUrl: 'icons/information.png',
+          })
+        });
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(`
+          <h4>${feature.properties.NAME}</h4>
+        `);
+      }
+    }).addTo(themaLayer.poi);
+  })
+  .catch(error => {
+    console.error('Error loading the JSON data:', error);
+  });
+
 
 
 
