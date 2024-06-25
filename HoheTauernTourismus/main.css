@@ -51,3 +51,11 @@ footer nav {
     display: inline-block;
 }
 
+#profile {
+    margin-top: 0.3em;
+    border: 1px solid gray;
+}
+
+#pulldown {
+    margin-bottom: 0.3em;
+}
