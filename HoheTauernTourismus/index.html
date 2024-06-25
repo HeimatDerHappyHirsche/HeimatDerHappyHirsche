@@ -26,6 +26,7 @@
     <script defer src="main.js"></script>
     <script src="Daten/ETAPPEN.json"></script>
     <script src="Daten/Almzentren.json"></script>
+    <script src="Daten/NPHT_POI.json"></script>
 
     <!--Leaflet Fullscreen-->
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
@@ -55,7 +56,14 @@
 
 <body>
     <main>
-        <h1>Tourismus im Nationalpark Hohe Tauern</h1>
+        <header>
+            <nav>
+                <div class="github">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/HeimatDerHappyHirsche">Github</a>
+            </nav>
+        </header>
+        <h1><i class="fa-solid fa-person-hiking"></i> Tourismus im Nationalpark Hohe Tauern</h1>
         <article>
             <p> Auch das Entdecken der Natur auf Wanderwegen im Nationalpark Hohe Tauern ist ein echter Spaß. Wo und Wie
                 die Verbindungen sind und wann und wo eingekehrt werden kann seht ihr in der Karte.
@@ -67,6 +75,7 @@
                 <button onclick="loadGPX('Daten/kreuzeckhoehenweg_etappe3.gpx')">Etappe 3</button>
                 <button onclick="loadGPX('Daten/kreuzeckhoehenweg_etappe4.gpx')">Etappe 4</button>
             </div>
+
             <div id="map"></div>
             <div id="info" style="width: 100%; padding: 10px; overflow-y: auto;"></div>
             <div id="profile"></div>
