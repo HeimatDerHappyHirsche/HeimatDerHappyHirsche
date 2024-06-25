@@ -12,6 +12,7 @@ var map = L.map('map', {
 ).setView([großglockner.lat, großglockner.lng], 10);
 
 
+
 // BasemapAT Layer mit Leaflet provider plugin als startLayer Variable
 var startLayer = L.tileLayer.provider("BasemapAT.grau");
 startLayer.addTo(map);
@@ -72,6 +73,8 @@ new L.Control.MiniMap(
 let controlElevation_1 = L.control.elevation({
   time: false,
   elevationDiv: "#profile",
+  toggleDisplay: false,
+  theme: "touren",
   height: 200,
 }).addTo(map);
 controlElevation_1.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
@@ -79,6 +82,8 @@ controlElevation_1.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
 let controlElevation_2 = L.control.elevation({
   time: false,
   elevationDiv: "#profile",
+  toggleDisplay: false,
+  theme: "touren",
   height: 200,
 }).addTo(map);
 controlElevation_2.load("Daten/kreuzeckhoehenweg_etappe2.gpx");
@@ -86,6 +91,8 @@ controlElevation_2.load("Daten/kreuzeckhoehenweg_etappe2.gpx");
 let controlElevation_3 = L.control.elevation({
   time: false,
   elevationDiv: "#profile",
+  toggleDisplay: false,
+  theme: "touren",
   height: 200,
 }).addTo(map);
 controlElevation_3.load("Daten/kreuzeckhoehenweg_etappe3.gpx");
@@ -93,6 +100,8 @@ controlElevation_3.load("Daten/kreuzeckhoehenweg_etappe3.gpx");
 let controlElevation_4 = L.control.elevation({
   time: false,
   elevationDiv: "#profile",
+  toggleDisplay: false,
+  theme: "touren",
   height: 200,
 }).addTo(map);
 controlElevation_4.load("Daten/kreuzeckhoehenweg_etappe4.gpx");
