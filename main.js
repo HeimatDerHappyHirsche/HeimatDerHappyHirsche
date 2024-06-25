@@ -105,20 +105,32 @@ nationalParks.forEach(park => {
     marker.name = park.name;
 
     // Popup-Inhalt abhängig vom Nationalpark
-    let popupContent = `
-        <div class="popup-content">
-            <h4>${park.name}</h4>
-            <img src="${park.image}" alt="${park.name}" style="width:100%;"><br>
-            <small>Bildnachweis: <a href="${park.credit.split(', ')[2]}" target="_blank">${park.credit}</a></small>
-        </div>
-    `;
+    let popupContent = document.createElement('div');
+    popupContent.classList.add('popup-content');
+    
+    let parkName = document.createElement('h4');
+    parkName.textContent = park.name;
+    popupContent.appendChild(parkName);
+
+    let parkImage = document.createElement('img');
+    parkImage.src = park.image;
+    parkImage.alt = park.name;
+    parkImage.style.width = '100%';
+    popupContent.appendChild(parkImage);
+
+    let credit = document.createElement('small');
+    credit.innerHTML = `Bildnachweis: <a href="${park.credit.split(', ')[2]}" target="_blank">${park.credit}</a>`;
+    popupContent.appendChild(credit);
 
     // Links für den Nationalpark Hohe Tauern hinzufügen
     if (park.name === "Nationalpark Hohe Tauern") {
-        popupContent += `
-            <p> Für Informationen über touristische Angebote im Nationalpark: <a href="${park.tourismLink}" target="_blank">Nationalpark Hohe Tauern - Tourismus</a></p>
-            <p> Die Schönheit der Natur im Nationalpark erleben: <a href="${park.natureLink}" target="_blank">Nationalpark Hohe Tauern - Schönheit der Natur</a></p>
-        `;
+        let tourismLink = document.createElement('p');
+        tourismLink.innerHTML = `Für Informationen über touristische Angebote im Nationalpark: <a href="${park.tourismLink}" target="_blank">Nationalpark Hohe Tauern - Tourismus</a>`;
+        popupContent.appendChild(tourismLink);
+
+        let natureLink = document.createElement('p');
+        natureLink.innerHTML = `Die Schönheit der Natur im Nationalpark erleben: <a href="${park.natureLink}" target="_blank">Nationalpark Hohe Tauern - Schönheit der Natur</a>`;
+        popupContent.appendChild(natureLink);
     }
 
     marker.bindPopup(popupContent);
