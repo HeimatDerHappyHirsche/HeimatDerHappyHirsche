@@ -4,14 +4,16 @@ var großglockner = {
   lng: 12.6939,
   title: "Großglockner"
 };
+var gorßglockner = L.marker([47.074531,12.6939])
+gorßglockner.setOpacity(0);
 
 // Karte initialisieren
 var map = L.map('map', {
   fullscreenControl: true,
 }
 ).setView([großglockner.lat, großglockner.lng], 10);
-
-
+map.on('load', zoomToNP);
+gorßglockner.addTo(map)
 
 // BasemapAT Layer mit Leaflet provider plugin als startLayer Variable
 var startLayer = L.tileLayer.provider("BasemapAT.grau");
@@ -44,24 +46,6 @@ L.control.scale({
   imperial: false,
 }).addTo(map);
 
-/*let controlElevation = L.control.elevation({
-   time: false,
-    elevationDiv: "#profile",
-    height: 300,
-    theme: "trail-HoheTauern",
-}).addTo(map);
-controlElevation.load("HoheTauernTourismus/grossglockner_a");
-
-let pulldown = document.querySelector("#pulldown");
-
-for (let tour of TOUREN) {
-    let status = "";
-    if (tour.nr == 1) {
-        status = "selected";
-    }
-    pulldown.innerHTML += `<option ${status}>Etappe ${tour.nr}: ${tour.titel}</option>`;
-}
-*/
 new L.Control.MiniMap(
   L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
     attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
@@ -110,75 +94,16 @@ let controlElevation_4 = L.control.elevation({
 }).addTo(map);
 controlElevation_4.load("Daten/kreuzeckhoehenweg_etappe4.gpx");
 
-/*let pulldown = document.querySelector("#pulldown");
-
-for (let etappe of ETAPPEN) {
-  let status = "";
-  if (etappe.nr == 1) {
-      status = "selected";
-  }
-  pulldown.innerHTML += `<option ${status} value="${etappe.start}">Etappe ${etappe.nr}: ${etappe.titel}</option>`;
-}
-
-pulldown.onchange = function (evt) {
-  let username = evt.target.value;
-  let url = `${etappe.link}`;
-  window.location.href = url;
-}
-*/
-
-// Variable für den aktuellen GPX-Layer
-/*let currentGPXLayer;
-
-// Funktion zum Laden einer GPX-Datei
-function loadGPX(gpxData) {
-  if (currentGPXLayer) {
-    map.removeLayer(currentGPXLayer);
-    controlElevation.clear();
-  }
-
-  fetch(gpxData)
-    .then(response => response.text())
-    .then(gpxData => {
-      currentGPXLayer = new L.Layer(gpxData, {
-        async: true
-      });
-      console.log(1);
-
-      currentGPXLayer.on('loaded', function (e) {
-        map.fitBounds(e.target.getBounds());
-      });
-      console.log(2);
-      currentGPXLayer.on('addline', function (e) {
-        controlElevation.addData(e.line);
-      });
-      console.log(3);
-      
-
-      
-    })
-    .catch(error => console.error('Error loading GPX file:', error));
-}
-console.log(4);
-*/
-// Lade die erste Etappe standardmäßig
-
-
-
-fetch("Daten/kreuzeckhoehenweg_etappe1.gpx")
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: 'green'
-      },
-    }).addTo(themaLayer.borders);
-  })
-  .catch(error => console.error('Error fetching data:', error))
-
+/*let polygons = new Array();*/
 fetch("../NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
   .then(data => {
+   /* for(var i = 0; i< data.features[0].geometry.coordinates.length;i++){
+      for(var j=0; j< data.features[0].geometry.coordinates[i].length;j++){
+        polygons.push(data.features[0].geometry.coordinates[i][j])
+        console.log("edit new polygon")
+      } 
+    }*/
     L.geoJSON(data, {
       style: {
         color: 'green'
@@ -187,11 +112,15 @@ fetch("../NationalparkHoheTauern/npht_agrenze_new.geojson")
   })
   .catch(error => console.error('Error fetching data:', error));
 
+
 fetch("Daten/Almzentren.json")
   .then(response => response.json())
   .then(data => {
     L.geoJSON(data, {
       pointToLayer: function (feature, latlng) {
+        /*polygons.forEach((p)=>{
+          if(inside(latlng,p))return null;
+        });*/
         return L.marker(latlng, {
           icon: L.icon({
             iconUrl: 'icons/hut.png',
@@ -209,7 +138,25 @@ fetch("Daten/Almzentren.json")
     console.error('Error loading the JSON data:', error);
   });
 
+  /*function inside(point, vs) {
+    // ray-casting algorithm based on
+    // https://wrf.ecse.rpi.edu/Research/Short_Notes/pnpoly.html
 
+    var x = point[0], y = point[1];
+console.log(vs)
+    var inside = false;
+    for (var i = 0, j = vs.length - 1; i < vs.length; j = i++) {
+        var xi = vs[i][0], yi = vs[i][1];
+        var xj = vs[j][0], yj = vs[j][1];
+
+        var intersect = ((yi > y) != (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+
+    return inside;
+};
+*/
   var markers = L.markerClusterGroup({
       disableClusteringAtZoom: 17
   });
@@ -236,7 +183,25 @@ fetch("Daten/NPHT_POI.json")
     console.error('Error loading the JSON data:', error);
   });
 
-
-
-
-
+function zoomToKreuzeckhoehenweg (){
+  var bounds1 = controlElevation_1.getBounds();
+  var bounds2 = controlElevation_2.getBounds();
+  var bounds3 = controlElevation_3.getBounds();
+  var bounds4 = controlElevation_4.getBounds();
+  map.fitBounds(bounds1.extend(bounds2.extend(bounds3.extend(bounds4))));
+}
+function zoomToEtappe1 (){
+  map.fitBounds(controlElevation_1.getBounds());
+}
+function zoomToEtappe2 (){
+  map.fitBounds(controlElevation_2.getBounds());
+}
+function zoomToEtappe3 (){
+  map.fitBounds(controlElevation_3.getBounds());
+}
+function zoomToEtappe4 (){
+  map.fitBounds(controlElevation_4.getBounds());
+}
+function zoomToNP (){
+  map.flyTo(gorßglockner.getLatLng(), 10);
+}

@@ -71,14 +71,14 @@
                 Ein Highlight der Region ist der Kreuzeckhöhenweg. Mehr Information findet ihr dazu in der interaktiven
                 Karte und der Beschreibung darunter</p>
             <div class="buttons">
-                <button onclick="zoom('Daten/kreuzeckhoehenweg_etappe3.gpx')">Kreuzeckhöhenweg</button>
-                <button onclick="control.Elevation_1('Daten/kreuzeckhoehenweg_etappe1.gpx')">Etappe 1</button>
-                <button onclick="control.Elevation_2('Daten/kreuzeckhoehenweg_etappe2.gpx')">Etappe 2</button>
-                <button onclick="control.Elevation_3('Daten/kreuzeckhoehenweg_etappe3.gpx')">Etappe 3</button>
-                <button onclick="control.Elevation_4('Daten/kreuzeckhoehenweg_etappe4.gpx')">Etappe 4</button>
+                <button onclick="zoomToKreuzeckhoehenweg()">Kreuzeckhöhenweg</button>
+                <button onclick="zoomToEtappe1()">Etappe 1</button>
+                <button onclick="zoomToEtappe2()">Etappe 2</button>
+                <button onclick="zoomToEtappe3()">Etappe 3</button>
+                <button onclick="zoomToEtappe4()">Etappe 4</button>   
             </div>
             <div class="backbutton">
-                <button onclick="zoom('../NationalparkHoheTauern/npht_agrenze_new.geojson')">Nationalpark</button>
+                <button onclick="zoomToNP()">Nationalpark</button>
             </div>
             <div id="map"></div>
             <div id="info" style="width: 100%; padding: 10px; overflow-y: auto;"></div>
