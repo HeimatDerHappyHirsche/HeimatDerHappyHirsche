@@ -58,22 +58,18 @@ let nationalParks = [
 
 // Karte initialisieren
 let map = L.map("map", {
-    fullscreenControl: true
+    fullscreenControl: true,
 }).setView(mapCenter, initialZoom);
 
-// thematische Layer
+// Layer für thematische Daten
 let themaLayer = {
-    forecast: L.featureGroup().addTo(map),
-    wind: L.featureGroup().addTo(map),
-    parks: L.featureGroup().addTo(map)
+    forecast: L.layerGroup(),
+    wind: L.layerGroup(),
+    parks: L.layerGroup(),
 };
 
-// Hintergrundlayer
-let layerControl = L.control.layers({
-    "Openstreetmap": L.tileLayer.provider("OpenStreetMap.Mapnik"),
-    "Esri WorldTopoMap": L.tileLayer.provider("Esri.WorldTopoMap"),
-    "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
-}).addTo(map);
+// Basislayer hinzufügen
+L.tileLayer.provider("Esri.WorldImagery").addTo(map);
 
 // thematische Layer zur Layer-Kontrolle hinzufügen
 L.control.layers({}, {
@@ -93,6 +89,14 @@ async function fetchWikipediaContent(title) {
     let response = await fetch(url);
     let data = await response.json();
     return data.extract;
+}
+
+// Funktion, um den gesamten Wikipedia-Artikel abzurufen
+async function fetchFullWikipediaContent(title) {
+    let url = `https://de.wikipedia.org/api/rest_v1/page/html/${title}`;
+    let response = await fetch(url);
+    let data = await response.text();
+    return data;
 }
 
 // Nationalparks Marker hinzufügen
@@ -122,7 +126,9 @@ nationalParks.forEach(park => {
     // Wikipedia-Inhalt anzeigen, wenn auf den Marker geklickt wird
     marker.on('click', async () => {
         let wikiText = await fetchWikipediaContent(park.wikiTitle);
+        let wikiFull = await fetchFullWikipediaContent(park.wikiTitle);
         document.getElementById('wiki-text').innerText = wikiText;
+        document.getElementById('wiki-full').innerHTML = wikiFull;
     });
 });
 
