@@ -125,7 +125,7 @@ nationalParks.forEach(park => {
     // Links für den Nationalpark Hohe Tauern hinzufügen
     if (park.name === "Nationalpark Hohe Tauern") {
         let tourismLink = document.createElement('p');
-        tourismLink.innerHTML = `Für Informationen über touristische Angebote im Nationalpark: <a href="${nationalParks.tourismLink}" target="_blank">Nationalpark Hohe Tauern - Tourismus</a>`;
+        tourismLink.innerHTML = `Für Informationen über touristische Angebote im Nationalpark: <a href="${park.tourismLink}" target="_blank">Nationalpark Hohe Tauern - Tourismus</a>`;
         popupContent.appendChild(tourismLink);
 
         let natureLink = document.createElement('p');
@@ -192,7 +192,7 @@ async function showForecast(lat, lon) {
     }
 
     // Link zum Datendownload
-    content += `<p><a href="${url}" target="met.no">Daten downloaden</a></p>`;
+    content += `<p><a href="${url}" target="_blank">Daten downloaden</a></p>`;
 
     L.popup()
         .setLatLng([lat, lon])
@@ -249,7 +249,7 @@ async function loadWind(url) {
     forecastDate.setHours(forecastDate.getHours() + jsondata[0].header.forecastTime);
 
     document.querySelector("#forecast-date").innerHTML = `
-    (<a href="${url}" target="met.no">Stand ${forecastDate.toLocaleString()}</a>)
+    (<a href="${url}" target="_blank">Stand ${forecastDate.toLocaleString()}</a>)
     `;
 }
 
