@@ -56,9 +56,6 @@ footer nav {
     border: 1px solid gray;
 }
 
-#pulldown {
-    margin-bottom: 0.3em;
-}
 
 .summary {
     margin-bottom: 2em;
@@ -66,6 +63,15 @@ footer nav {
 
 .summary-badge {
     display: inline-block;
+    padding: 0.4em;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-right: 0.5em;
+}
+
+.buttons {
+    display: inline-block;
+    color:rgb(255, 255, 255);
     padding: 0.4em;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
