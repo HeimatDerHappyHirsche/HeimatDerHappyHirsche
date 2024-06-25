@@ -18,7 +18,7 @@ startLayer.addTo(map);
 
 let themaLayer = {
   borders: L.featureGroup().addTo(map),
-  poi: L.featureGroup().addTo(map),
+  poi: L.markerClusterGroup({ disableClusteringAtZoom: 17 }),
   hut: L.markerClusterGroup({ disableClusteringAtZoom: 17 }),
 }
 
@@ -69,13 +69,33 @@ new L.Control.MiniMap(
 }
 ).addTo(map);
 
-var controlElevation = L.control.elevation({
+let controlElevation_1 = L.control.elevation({
   time: false,
   elevationDiv: "#profile",
   height: 200,
 }).addTo(map);
-controlElevation.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
+controlElevation_1.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
 
+let controlElevation_2 = L.control.elevation({
+  time: false,
+  elevationDiv: "#profile",
+  height: 200,
+}).addTo(map);
+controlElevation_2.load("Daten/kreuzeckhoehenweg_etappe2.gpx");
+
+let controlElevation_3 = L.control.elevation({
+  time: false,
+  elevationDiv: "#profile",
+  height: 200,
+}).addTo(map);
+controlElevation_3.load("Daten/kreuzeckhoehenweg_etappe3.gpx");
+
+let controlElevation_4 = L.control.elevation({
+  time: false,
+  elevationDiv: "#profile",
+  height: 200,
+}).addTo(map);
+controlElevation_4.load("Daten/kreuzeckhoehenweg_etappe4.gpx");
 
 /*let pulldown = document.querySelector("#pulldown");
 
