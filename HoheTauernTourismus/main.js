@@ -19,7 +19,6 @@ startLayer.addTo(map);
 let themaLayer = {
     borders: L.featureGroup().addTo(map),
     routen: L.featureGroup().addTo(map),
-    POI: L.featureGroup().addTo(map),
     hut: L.featureGroup().addTo(map),
 }
 
@@ -70,7 +69,7 @@ new L.Control.MiniMap(
 }
 ).addTo(map);
 
-fetch('NationalparkHoheTauern/npht_agrenze_new.geojson')
+fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
   .then(data => {
     L.geoJSON(data, {
@@ -81,7 +80,7 @@ fetch('NationalparkHoheTauern/npht_agrenze_new.geojson')
   })
   .catch(error => console.error('Error fetching data:', error));
 
-let lng = `Almenzentren.geojson${features.geometry.coordinates[0]}`,
+var lng = `Almenzentren.geojson${features.geometry.coordinates[0]}`,
     lat = `Almenzentren.geojson${features.geometry.coordinates[1]}`;
 
 show('Almzentren.geojson')
