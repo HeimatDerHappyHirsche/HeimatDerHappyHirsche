@@ -1,5 +1,5 @@
 let austriaBounds = [[46.372276, 9.530952], [49.020608, 17.160776]]; // Bounding box for Austria
-let mapCenter = [48.245556, 12.522778]; // Center the map on Mühldorf am Inn, damit Hohe Tauern zentral ist und Popup sichtbar ist
+let mapCenter = [48.245556, 12.522778]; // Center the map on Mühldorf am Inn
 let initialZoom = 7;
 
 // Liste der Nationalparks in Österreich
@@ -9,7 +9,9 @@ let nationalParks = [
         lat: 47.121201,
         lng: 12.713109,
         image: "images/hohetauern.jpg",
-        credit: "@WeAppU https://pixabay.com/de/photos/maltatal-malta-stausee-kraftwerk-578207/"
+        credit: "@WeAppU https://pixabay.com/de/photos/maltatal-malta-stausee-kraftwerk-578207/",
+        tourismLink: "HoheTauernTourismus/index.html",
+        natureLink: "NationalparkHoheTauern/index.html"
     },
     {
         name: "Nationalpark Neusiedler See - Seewinkel",
@@ -80,6 +82,8 @@ L.control.scale({
 nationalParks.forEach(park => {
     let marker = L.marker([park.lat, park.lng], { title: park.name }).addTo(themaLayer.parks);
     marker.name = park.name;
+
+    // Popup-Inhalt abhängig vom Nationalpark
     let popupContent = `
         <div class="popup-content">
             <h4>${park.name}</h4>
@@ -87,6 +91,15 @@ nationalParks.forEach(park => {
             <small>Bildnachweis: <a href="${park.credit.split(', ')[2]}" target="_blank">${park.credit}</a></small>
         </div>
     `;
+
+    // Links für den Nationalpark Hohe Tauern hinzufügen
+    if (park.name === "Nationalpark Hohe Tauern") {
+        popupContent += `
+            <p> Für Informationen über touristische Angebote im Nationalpark: <a href="${park.tourismLink}" target="_blank">Nationalpark Hohe Tauern - Tourismus</a></p>
+            <p> Die Schönheit der Natur im Nationalpark erleben: <a href="${park.natureLink}" target="_blank">Nationalpark Hohe Tauern - Schönheit der Natur</a></p>
+        `;
+    }
+
     marker.bindPopup(popupContent);
 });
 
@@ -165,6 +178,7 @@ function isInAustria(latlng) {
     return latlng.lat >= austriaBounds[0][0] && latlng.lat <= austriaBounds[1][0] &&
            latlng.lng >= austriaBounds[0][1] && latlng.lng <= austriaBounds[1][1];
 }
+
 // Grenzen von Österreich einfügen
 fetch('Daten/Oesterreich.geojson')
   .then(response => response.json())
