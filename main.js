@@ -11,42 +11,48 @@ let nationalParks = [
         image: "images/hohetauern.jpg",
         credit: "@WeAppU https://pixabay.com/de/photos/maltatal-malta-stausee-kraftwerk-578207/",
         tourismLink: "HoheTauernTourismus/index.html",
-        natureLink: "NationalparkHoheTauern/index.html"
+        natureLink: "NationalparkHoheTauern/index.html",
+        wikiTitle: "Nationalpark_Hohe_Tauern"
     },
     {
         name: "Nationalpark Neusiedler See - Seewinkel",
         lat: 47.773514,
         lng: 16.769231,
         image: "images/seewinkel.jpg",
-        credit: "@echtzeitjohann https://pixabay.com/de/photos/rinderherde-burgenland-seewinkel-1203871/"
+        credit: "@echtzeitjohann https://pixabay.com/de/photos/rinderherde-burgenland-seewinkel-1203871/",
+        wikiTitle: "Nationalpark_Neusiedler_See_-_Seewinkel"
     },
     {
         name: "Nationalpark Gesäuse",
         lat: 47.569953,
         lng: 14.615875,
         image: "images/gesäuse.jpg",
-        credit: "@jplenio https://pixabay.com/de/photos/alpine-berge-sonnenuntergang-alpen-5630807/"
+        credit: "@jplenio https://pixabay.com/de/photos/alpine-berge-sonnenuntergang-alpen-5630807/",
+        wikiTitle: "Nationalpark_Gesäuse"
     },
     {
         name: "Nationalpark Thayatal",
         lat: 48.859317,
         lng: 15.898437,
         image: "images/thaya.jpg",
-        credit: "@Neo98 https://pixabay.com/de/photos/natur-tschechien-podyji-nationalpark-3520727/"
+        credit: "@Neo98 https://pixabay.com/de/photos/natur-tschechien-podyji-nationalpark-3520727/",
+        wikiTitle: "Nationalpark_Thayatal"
     },
     {
         name: "Nationalpark Kalkalpen",
         lat: 47.805639,
         lng: 14.307364,
         image: "images/kalkalpen.jpg",
-        credit: "@HF_AT https://pixabay.com/de/photos/dambergwarte-fog-foggy-foggy-forest-7566021/"
+        credit: "@HF_AT https://pixabay.com/de/photos/dambergwarte-fog-foggy-foggy-forest-7566021/",
+        wikiTitle: "Nationalpark_Kalkalpen"
     },
     {
         name: "Nationalpark Donau-Auen",
         lat: 48.155263,
         lng: 16.816245,
         image: "images/donauauen.jpg",
-        credit: "@Cs- https://pixabay.com/de/photos/danube-die-donau-donau-rückstau-2424063/"
+        credit: "@Cs- https://pixabay.com/de/photos/danube-die-donau-donau-rückstau-2424063/",
+        wikiTitle: "Nationalpark_Donau-Auen"
     }
 ];
 
@@ -66,8 +72,11 @@ let themaLayer = {
 let layerControl = L.control.layers({
     "Openstreetmap": L.tileLayer.provider("OpenStreetMap.Mapnik"),
     "Esri WorldTopoMap": L.tileLayer.provider("Esri.WorldTopoMap"),
-    "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery").addTo(map)
-}, {
+    "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
+}).addTo(map);
+
+// thematische Layer zur Layer-Kontrolle hinzufügen
+L.control.layers({}, {
     "Wettervorhersage MET Norway": themaLayer.forecast,
     "ECMWF Windvorhersage": themaLayer.wind,
     "Nationalparks": themaLayer.parks
@@ -77,6 +86,14 @@ let layerControl = L.control.layers({
 L.control.scale({
     imperial: false,
 }).addTo(map);
+
+// Funktion, um Wikipedia-Inhalte abzurufen
+async function fetchWikipediaContent(title) {
+    let url = `https://de.wikipedia.org/api/rest_v1/page/summary/${title}`;
+    let response = await fetch(url);
+    let data = await response.json();
+    return data.extract;
+}
 
 // Nationalparks Marker hinzufügen
 nationalParks.forEach(park => {
@@ -101,6 +118,12 @@ nationalParks.forEach(park => {
     }
 
     marker.bindPopup(popupContent);
+
+    // Wikipedia-Inhalt anzeigen, wenn auf den Marker geklickt wird
+    marker.on('click', async () => {
+        let wikiText = await fetchWikipediaContent(park.wikiTitle);
+        document.getElementById('wiki-text').innerText = wikiText;
+    });
 });
 
 // Leaflet Search Control für Nationalparks
