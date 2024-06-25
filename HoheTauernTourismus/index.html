@@ -54,6 +54,7 @@
         integrity="sha512-mQ77VzAakzdpWdgfL/lM1ksNy89uFgibRQANsNneSTMD/bj0Y/8+94XMwYhnbzx8eki2hrbPpDm0vD0CiT2lcg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
 <body>
     <main>
         <header>
@@ -63,19 +64,22 @@
                     <a href="https://github.com/HeimatDerHappyHirsche">Github</a>
             </nav>
         </header>
-        <h1><i class="fa-solid fa-person-hiking"></i> Tourismus im Nationalpark Hohe Tauern</h1>
+        <h1><i class="fa-solid fa-person-hiking"></i> Tourismus im und um den Nationalpark Hohe Tauern</h1>
         <article>
             <p> Auch das Entdecken der Natur auf Wanderwegen im Nationalpark Hohe Tauern ist ein echter Spaß. Wo und Wie
                 die Verbindungen sind und wann und wo eingekehrt werden kann seht ihr in der Karte.
                 Ein Highlight der Region ist der Kreuzeckhöhenweg. Mehr Information findet ihr dazu in der interaktiven
                 Karte und der Beschreibung darunter</p>
             <div class="buttons">
-                <button onclick="loadGPX('Daten/kreuzeckhoehenweg_etappe1.gpx')">Etappe 1</button>
-                <button onclick="loadGPX('Daten/kreuzeckhoehenweg_etappe2.gpx')">Etappe 2</button>
-                <button onclick="loadGPX('Daten/kreuzeckhoehenweg_etappe3.gpx')">Etappe 3</button>
-                <button onclick="loadGPX('Daten/kreuzeckhoehenweg_etappe4.gpx')">Etappe 4</button>
+                <button onclick="zoom('Daten/kreuzeckhoehenweg_etappe3.gpx')">Kreuzeckhöhenweg</button>
+                <button onclick="control.Elevation_1('Daten/kreuzeckhoehenweg_etappe1.gpx')">Etappe 1</button>
+                <button onclick="control.Elevation_2('Daten/kreuzeckhoehenweg_etappe2.gpx')">Etappe 2</button>
+                <button onclick="control.Elevation_3('Daten/kreuzeckhoehenweg_etappe3.gpx')">Etappe 3</button>
+                <button onclick="control.Elevation_4('Daten/kreuzeckhoehenweg_etappe4.gpx')">Etappe 4</button>
             </div>
-
+            <div class="backbutton">
+                <button onclick="zoom('../NationalparkHoheTauern/npht_agrenze_new.geojson')">Nationalpark</button>
+            </div>
             <div id="map"></div>
             <div id="info" style="width: 100%; padding: 10px; overflow-y: auto;"></div>
             <div id="profile"></div>
