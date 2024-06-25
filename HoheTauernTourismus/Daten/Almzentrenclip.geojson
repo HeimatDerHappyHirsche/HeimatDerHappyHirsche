@@ -1,0 +1,3896 @@
+{
+    "type": "FeatureCollection",
+    "name": "Almzentren",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "fields": [
+        {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OBJECTID"
+        },
+        {
+            "name": "FID_Almzentren_JSONToFeatures",
+            "type": "esriFieldTypeInteger",
+            "alias": "FID_Almzentren_JSONToFeatures"
+        },
+        {
+            "name": "OBJECTID_1",
+            "type": "esriFieldTypeDouble",
+            "alias": "OBJECTID_1"
+        },
+        {
+            "name": "OBJEKT",
+            "type": "esriFieldTypeString",
+            "alias": "OBJEKT",
+            "length": 2000000000
+        },
+        {
+            "name": "NAME",
+            "type": "esriFieldTypeString",
+            "alias": "NAME",
+            "length": 2000000000
+        },
+        {
+            "name": "STAND",
+            "type": "esriFieldTypeString",
+            "alias": "STAND",
+            "length": 2000000000
+        },
+        {
+            "name": "OBJEKTBEZEICHNUNG",
+            "type": "esriFieldTypeString",
+            "alias": "OBJEKTBEZEICHNUNG",
+            "length": 2000000000
+        },
+        {
+            "name": "GEMNR",
+            "type": "esriFieldTypeDouble",
+            "alias": "GEMNR"
+        },
+        {
+            "name": "ERFASSUNGSMASSSTAB",
+            "type": "esriFieldTypeDouble",
+            "alias": "ERFASSUNGSMASSSTAB"
+        },
+        {
+            "name": "CREATETIMESTAMP",
+            "type": "esriFieldTypeString",
+            "alias": "CREATETIMESTAMP",
+            "length": 2000000000
+        },
+        {
+            "name": "UPDATETIMESTAMP",
+            "type": "esriFieldTypeString",
+            "alias": "UPDATETIMESTAMP",
+            "length": 2000000000
+        },
+        {
+            "name": "FID_Grenze_JSONToFeatures",
+            "type": "esriFieldTypeInteger",
+            "alias": "FID_Grenze_JSONToFeatures"
+        },
+        {
+            "name": "OBJECTID_12",
+            "type": "esriFieldTypeDouble",
+            "alias": "OBJECTID_1"
+        },
+        {
+            "name": "OBJECTID_12_13",
+            "type": "esriFieldTypeDouble",
+            "alias": "OBJECTID_12"
+        },
+        {
+            "name": "NAME_1",
+            "type": "esriFieldTypeString",
+            "alias": "NAME",
+            "length": 2000000000
+        },
+        {
+            "name": "SHAPE_LENG",
+            "type": "esriFieldTypeDouble",
+            "alias": "SHAPE_LENG"
+        },
+        {
+            "name": "NPZONE",
+            "type": "esriFieldTypeDouble",
+            "alias": "NPZONE"
+        },
+        {
+            "name": "HECTARES",
+            "type": "esriFieldTypeDouble",
+            "alias": "HECTARES"
+        },
+        {
+            "name": "SHAPE_LE_1",
+            "type": "esriFieldTypeDouble",
+            "alias": "SHAPE_LE_1"
+        }
+    ],
+    "features": [
+        {
+            "attributes": {
+                "OBJECTID": 1,
+                "FID_Almzentren_JSONToFeatures": 2706,
+                "OBJECTID_1": 2706,
+                "OBJEKT": "EL",
+                "NAME": "Well-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70719,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T17:20:33Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.791332362000048,
+                "y": 46.891168100000073
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 2,
+                "FID_Almzentren_JSONToFeatures": 175,
+                "OBJECTID_1": 175,
+                "OBJEKT": "HL",
+                "NAME": "Göriacher-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70707,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T17:21:14Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.815848809000045,
+                "y": 46.89662418000006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 3,
+                "FID_Almzentren_JSONToFeatures": 2999,
+                "OBJECTID_1": 2999,
+                "OBJEKT": "EL",
+                "NAME": "Obrischgen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70719,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:21:50Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.789616567000053,
+                "y": 46.902798016000077
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 4,
+                "FID_Almzentren_JSONToFeatures": 1563,
+                "OBJECTID_1": 1563,
+                "OBJEKT": "EL",
+                "NAME": "Trelebitsch-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70719,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:34:39Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.772503563000043,
+                "y": 46.90771146700007
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 5,
+                "FID_Almzentren_JSONToFeatures": 2393,
+                "OBJECTID_1": 2393,
+                "OBJEKT": "EL",
+                "NAME": "Rohracher-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70719,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T13:45:04Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.788258144000054,
+                "y": 46.911749690000079
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 6,
+                "FID_Almzentren_JSONToFeatures": 2425,
+                "OBJECTID_1": 2425,
+                "OBJEKT": "NL",
+                "NAME": "Kaserle-Alm (Niederleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T16:21:46Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.28714145400005,
+                "y": 46.919973886000037
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 7,
+                "FID_Almzentren_JSONToFeatures": 3556,
+                "OBJECTID_1": 3556,
+                "OBJEKT": "EL",
+                "NAME": "Gaimberger-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70719,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T15:21:37Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.765524766000055,
+                "y": 46.922126131000027
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 8,
+                "FID_Almzentren_JSONToFeatures": 2155,
+                "OBJECTID_1": 2155,
+                "OBJEKT": "EL",
+                "NAME": "Happ-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T09:59:48Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.345539966000047,
+                "y": 46.926734427000042
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 9,
+                "FID_Almzentren_JSONToFeatures": 2426,
+                "OBJECTID_1": 2426,
+                "OBJEKT": "EL",
+                "NAME": "Ede-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:48:11Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.297648318000029,
+                "y": 46.927703045000044
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 10,
+                "FID_Almzentren_JSONToFeatures": 3689,
+                "OBJECTID_1": 3689,
+                "OBJEKT": "EL",
+                "NAME": "Mastkofel-Alm",
+                "STAND": "2013-11-19T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2013-11-19T14:23:46Z",
+                "UPDATETIMESTAMP": "2020-08-17T13:57:12Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.392725547000055,
+                "y": 46.927809922000051
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 11,
+                "FID_Almzentren_JSONToFeatures": 1564,
+                "OBJECTID_1": 1564,
+                "OBJEKT": "EL",
+                "NAME": "Hof-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70719,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T14:31:18Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.75919827000007,
+                "y": 46.929090735000045
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 12,
+                "FID_Almzentren_JSONToFeatures": 2930,
+                "OBJECTID_1": 2930,
+                "OBJEKT": "EL",
+                "NAME": "Maik-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T13:45:18Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.300834791000057,
+                "y": 46.929170848000069
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 13,
+                "FID_Almzentren_JSONToFeatures": 2423,
+                "OBJECTID_1": 2423,
+                "OBJEKT": "EL",
+                "NAME": "Erlsbacher-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:12:15Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.260714137000036,
+                "y": 46.929273916000056
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 14,
+                "FID_Almzentren_JSONToFeatures": 2124,
+                "OBJECTID_1": 2124,
+                "OBJEKT": "EL",
+                "NAME": "Wowis-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T15:05:53Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.397741432000032,
+                "y": 46.929632364000042
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 15,
+                "FID_Almzentren_JSONToFeatures": 3736,
+                "OBJECTID_1": 3736,
+                "OBJEKT": "EL",
+                "NAME": "Oberseite-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:16:40Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.289727783000046,
+                "y": 46.929667146000043
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 16,
+                "FID_Almzentren_JSONToFeatures": 1644,
+                "OBJECTID_1": 1644,
+                "OBJEKT": "HL",
+                "NAME": "Kaserle-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T16:21:29Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.27569187000006,
+                "y": 46.929764568000053
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 17,
+                "FID_Almzentren_JSONToFeatures": 2421,
+                "OBJECTID_1": 2421,
+                "OBJEKT": "EL",
+                "NAME": "Tegischer-Bachl-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:13:34Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.352870585000062,
+                "y": 46.929998428000033
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 18,
+                "FID_Almzentren_JSONToFeatures": 2928,
+                "OBJECTID_1": 2928,
+                "OBJEKT": "NL",
+                "NAME": "Oberberg-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T16:55:16Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.318643993000023,
+                "y": 46.93037075400008
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 19,
+                "FID_Almzentren_JSONToFeatures": 2424,
+                "OBJECTID_1": 2424,
+                "OBJEKT": "EL",
+                "NAME": "Frelitzen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:46:52Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.27946557000007,
+                "y": 46.930738836000046
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 20,
+                "FID_Almzentren_JSONToFeatures": 2126,
+                "OBJECTID_1": 2126,
+                "OBJEKT": "EL",
+                "NAME": "Froditzen-Mesner-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:48:43Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.373310955000022,
+                "y": 46.934485971000072
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 21,
+                "FID_Almzentren_JSONToFeatures": 2125,
+                "OBJECTID_1": 2125,
+                "OBJEKT": "EL",
+                "NAME": "Gritzer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T09:15:49Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.403615426000044,
+                "y": 46.934738977000052
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 22,
+                "FID_Almzentren_JSONToFeatures": 2117,
+                "OBJECTID_1": 2117,
+                "OBJEKT": "EL",
+                "NAME": "Oberkross-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:11:45Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.414137292000021,
+                "y": 46.93585009800006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 23,
+                "FID_Almzentren_JSONToFeatures": 2818,
+                "OBJECTID_1": 2818,
+                "OBJEKT": "EL",
+                "NAME": "Prozent-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T09:13:30Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.438639701000056,
+                "y": 46.93655558200004
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 24,
+                "FID_Almzentren_JSONToFeatures": 2491,
+                "OBJECTID_1": 2491,
+                "OBJEKT": "EL",
+                "NAME": "Lusen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T13:40:51Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.371766964000074,
+                "y": 46.936654709000038
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 25,
+                "FID_Almzentren_JSONToFeatures": 3714,
+                "OBJECTID_1": 3714,
+                "OBJEKT": "EL",
+                "NAME": "Froditzen-Baur-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:48:10Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.380434979000029,
+                "y": 46.936790028000075
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 26,
+                "FID_Almzentren_JSONToFeatures": 2118,
+                "OBJECTID_1": 2118,
+                "OBJEKT": "EL",
+                "NAME": "Zischke-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T14:50:50Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.417980999000065,
+                "y": 46.937737393000077
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 27,
+                "FID_Almzentren_JSONToFeatures": 2120,
+                "OBJECTID_1": 2120,
+                "OBJEKT": "EL",
+                "NAME": "Mellitz-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T14:35:35Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.451850801000035,
+                "y": 46.938336750000076
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 28,
+                "FID_Almzentren_JSONToFeatures": 3729,
+                "OBJECTID_1": 3729,
+                "OBJEKT": "EL",
+                "NAME": "Glanz-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70709,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T17:18:24Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.541500670000062,
+                "y": 46.939015918000052
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 29,
+                "FID_Almzentren_JSONToFeatures": 2119,
+                "OBJECTID_1": 2119,
+                "OBJEKT": "EL",
+                "NAME": "Frötze-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:49:29Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.42233699600007,
+                "y": 46.939788471000043
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 30,
+                "FID_Almzentren_JSONToFeatures": 3720,
+                "OBJECTID_1": 3720,
+                "OBJEKT": "EL",
+                "NAME": "Ratzell-Rajacher-Schaf-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70709,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T09:53:53Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.524725360000048,
+                "y": 46.941567982000038
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 31,
+                "FID_Almzentren_JSONToFeatures": 2121,
+                "OBJECTID_1": 2121,
+                "OBJEKT": "EL",
+                "NAME": "Mooserhöhe-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T14:56:28Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.479108764000046,
+                "y": 46.945551654000042
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 32,
+                "FID_Almzentren_JSONToFeatures": 3730,
+                "OBJECTID_1": 3730,
+                "OBJEKT": "NL",
+                "NAME": "Leiten-Rossfeld-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T11:33:20Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.334281610000062,
+                "y": 46.945580720000066
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 33,
+                "FID_Almzentren_JSONToFeatures": 2116,
+                "OBJECTID_1": 2116,
+                "OBJEKT": "EL",
+                "NAME": "Kapaun-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70726,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T16:14:05Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.432591541000022,
+                "y": 46.945648752000068
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 34,
+                "FID_Almzentren_JSONToFeatures": 2290,
+                "OBJECTID_1": 2290,
+                "OBJEKT": "EL",
+                "NAME": "Lepote-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T11:35:36Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.645538842000065,
+                "y": 46.946022588000062
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 35,
+                "FID_Almzentren_JSONToFeatures": 3737,
+                "OBJECTID_1": 3737,
+                "OBJEKT": "EL",
+                "NAME": "Oberhaus-Pernaigen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:07:26Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.21580001500007,
+                "y": 46.94743909500005
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 36,
+                "FID_Almzentren_JSONToFeatures": 3024,
+                "OBJECTID_1": 3024,
+                "OBJEKT": "SCHL",
+                "NAME": "Lacknach-Alm (Schafleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Schafleger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T10:54:33Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.52081256300005,
+                "y": 46.949272442000051
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 37,
+                "FID_Almzentren_JSONToFeatures": 2159,
+                "OBJECTID_1": 2159,
+                "OBJEKT": "HL",
+                "NAME": "Trojer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:41:10Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.305825086000027,
+                "y": 46.950592709000034
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 38,
+                "FID_Almzentren_JSONToFeatures": 1712,
+                "OBJECTID_1": 1712,
+                "OBJEKT": "EL",
+                "NAME": "Mitteldorf-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T14:40:46Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.480322288000025,
+                "y": 46.951675926000064
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 39,
+                "FID_Almzentren_JSONToFeatures": 3179,
+                "OBJECTID_1": 3179,
+                "OBJEKT": "EL",
+                "NAME": "Staniska-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T16:47:30Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.64803981700004,
+                "y": 46.95208462800008
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 40,
+                "FID_Almzentren_JSONToFeatures": 2101,
+                "OBJECTID_1": 2101,
+                "OBJEKT": "NL",
+                "NAME": "Steinkas-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T17:02:56Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.423376314000052,
+                "y": 46.955773156000078
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 41,
+                "FID_Almzentren_JSONToFeatures": 2158,
+                "OBJECTID_1": 2158,
+                "OBJEKT": "EL",
+                "NAME": "Durfeld-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:39:03Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.314418440000054,
+                "y": 46.956655622000028
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 42,
+                "FID_Almzentren_JSONToFeatures": 2977,
+                "OBJECTID_1": 2977,
+                "OBJEKT": "HL",
+                "NAME": "Peterer-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:44:10Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.476446336000038,
+                "y": 46.957019531000071
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 43,
+                "FID_Almzentren_JSONToFeatures": 2095,
+                "OBJECTID_1": 2095,
+                "OBJEKT": "EL",
+                "NAME": "Teissler-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:14:39Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.436718927000072,
+                "y": 46.957599468000069
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 44,
+                "FID_Almzentren_JSONToFeatures": 3002,
+                "OBJECTID_1": 3002,
+                "OBJEKT": "EL",
+                "NAME": "Obermerschen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:12:30Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.409455283000057,
+                "y": 46.957705341000064
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 45,
+                "FID_Almzentren_JSONToFeatures": 3728,
+                "OBJECTID_1": 3728,
+                "OBJEKT": "NL",
+                "NAME": "Fratnik-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:46:02Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.455187766000051,
+                "y": 46.95780446200007
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 46,
+                "FID_Almzentren_JSONToFeatures": 2833,
+                "OBJECTID_1": 2833,
+                "OBJEKT": "GAL",
+                "NAME": "Glauret-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Galtviehleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T17:18:57Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.376020555000025,
+                "y": 46.958875509000052
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 47,
+                "FID_Almzentren_JSONToFeatures": 2270,
+                "OBJECTID_1": 2270,
+                "OBJEKT": "HL",
+                "NAME": "Röppitz-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T13:36:13Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.475272920000066,
+                "y": 46.959103068000047
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 48,
+                "FID_Almzentren_JSONToFeatures": 2114,
+                "OBJECTID_1": 2114,
+                "OBJEKT": "EL",
+                "NAME": "Unterseebach-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T10:52:13Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.194112448000055,
+                "y": 46.959945688000062
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 49,
+                "FID_Almzentren_JSONToFeatures": 2104,
+                "OBJECTID_1": 2104,
+                "OBJEKT": "EL",
+                "NAME": "Jaggler-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T15:46:52Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.480664337000064,
+                "y": 46.95995479700008
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 50,
+                "FID_Almzentren_JSONToFeatures": 2099,
+                "OBJECTID_1": 2099,
+                "OBJEKT": "EL",
+                "NAME": "Oberseebach-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:16:20Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.190488949000041,
+                "y": 46.961685417000069
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 51,
+                "FID_Almzentren_JSONToFeatures": 2134,
+                "OBJECTID_1": 2134,
+                "OBJEKT": "GAL",
+                "NAME": "Woadebene-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Galtviehleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T15:06:51Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.394717692000029,
+                "y": 46.962191392000079
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 52,
+                "FID_Almzentren_JSONToFeatures": 2102,
+                "OBJECTID_1": 2102,
+                "OBJEKT": "NL",
+                "NAME": "Zupal-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T14:45:59Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.432487183000035,
+                "y": 46.963474255000051
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 53,
+                "FID_Almzentren_JSONToFeatures": 2093,
+                "OBJECTID_1": 2093,
+                "OBJEKT": "EL",
+                "NAME": "Stadler-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T16:37:51Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.478583443000048,
+                "y": 46.964119373000074
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 54,
+                "FID_Almzentren_JSONToFeatures": 2105,
+                "OBJECTID_1": 2105,
+                "OBJEKT": "NL",
+                "NAME": "Peterer-Alm (Niederleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:44:21Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.481417417000046,
+                "y": 46.96423537700008
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 55,
+                "FID_Almzentren_JSONToFeatures": 2271,
+                "OBJECTID_1": 2271,
+                "OBJEKT": "NL",
+                "NAME": "Röppitz-Alm (Niederleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T13:36:32Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.478588673000047,
+                "y": 46.965911923000078
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 56,
+                "FID_Almzentren_JSONToFeatures": 2176,
+                "OBJECTID_1": 2176,
+                "OBJEKT": "EL",
+                "NAME": "Arnitz-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T10:27:34Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.500107455000034,
+                "y": 46.966653360000066
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 57,
+                "FID_Almzentren_JSONToFeatures": 2489,
+                "OBJECTID_1": 2489,
+                "OBJEKT": "EL",
+                "NAME": "First-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:37:26Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.455107198000064,
+                "y": 46.967764487000068
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 58,
+                "FID_Almzentren_JSONToFeatures": 2272,
+                "OBJECTID_1": 2272,
+                "OBJEKT": "EL",
+                "NAME": "Brunnstatt-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:19:57Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.48028632300003,
+                "y": 46.968423305000044
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 59,
+                "FID_Almzentren_JSONToFeatures": 1711,
+                "OBJECTID_1": 1711,
+                "OBJEKT": "EL",
+                "NAME": "Lienharter Frattnigg-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T11:38:46Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.460849171000064,
+                "y": 46.968487866000032
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 60,
+                "FID_Almzentren_JSONToFeatures": 1648,
+                "OBJECTID_1": 1648,
+                "OBJEKT": "EL",
+                "NAME": "Innergasperer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T15:18:59Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.392747397000051,
+                "y": 46.969158373000027
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 61,
+                "FID_Almzentren_JSONToFeatures": 3018,
+                "OBJECTID_1": 3018,
+                "OBJEKT": "EL",
+                "NAME": "Fallwindes-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:17:58Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.653574584000069,
+                "y": 46.969942812000056
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 62,
+                "FID_Almzentren_JSONToFeatures": 2094,
+                "OBJECTID_1": 2094,
+                "OBJEKT": "EL",
+                "NAME": "Bloden-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T11:36:57Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.465996362000055,
+                "y": 46.97186415200008
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 63,
+                "FID_Almzentren_JSONToFeatures": 2135,
+                "OBJECTID_1": 2135,
+                "OBJEKT": "GAL",
+                "NAME": "Hinterstaber-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Galtviehleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T10:38:54Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.373737652000045,
+                "y": 46.971867932000066
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 64,
+                "FID_Almzentren_JSONToFeatures": 2188,
+                "OBJECTID_1": 2188,
+                "OBJEKT": "EL",
+                "NAME": "Zunig-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T14:46:28Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.518362933000049,
+                "y": 46.972854856000026
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 65,
+                "FID_Almzentren_JSONToFeatures": 2289,
+                "OBJECTID_1": 2289,
+                "OBJEKT": "EL",
+                "NAME": "Gorgasser-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T17:30:59Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.680521484000053,
+                "y": 46.973056813000028
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 66,
+                "FID_Almzentren_JSONToFeatures": 1876,
+                "OBJECTID_1": 1876,
+                "OBJEKT": "EL",
+                "NAME": "Reitereck-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T10:41:44Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.486197723000032,
+                "y": 46.973637660000065
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 67,
+                "FID_Almzentren_JSONToFeatures": 3584,
+                "OBJECTID_1": 3584,
+                "OBJEKT": "EL",
+                "NAME": "Satteler-Röggen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T14:00:48Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.388387807000072,
+                "y": 46.97441716600008
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 68,
+                "FID_Almzentren_JSONToFeatures": 2131,
+                "OBJECTID_1": 2131,
+                "OBJEKT": "EL",
+                "NAME": "Rainer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T09:18:12Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.398904524000045,
+                "y": 46.974495173000037
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 69,
+                "FID_Almzentren_JSONToFeatures": 2709,
+                "OBJECTID_1": 2709,
+                "OBJEKT": "NL",
+                "NAME": "Alisch-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T09:47:44Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.392412454000066,
+                "y": 46.975348263000058
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 70,
+                "FID_Almzentren_JSONToFeatures": 2128,
+                "OBJECTID_1": 2128,
+                "OBJEKT": "NL",
+                "NAME": "Kuchlmair-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T10:45:29Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.402618418000031,
+                "y": 46.976024261000077
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 71,
+                "FID_Almzentren_JSONToFeatures": 2132,
+                "OBJECTID_1": 2132,
+                "OBJEKT": "EL",
+                "NAME": "Außerrainer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T11:02:54Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.393205907000038,
+                "y": 46.977250523000066
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 72,
+                "FID_Almzentren_JSONToFeatures": 2115,
+                "OBJECTID_1": 2115,
+                "OBJEKT": "EL",
+                "NAME": "Jagdhaus-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T15:45:52Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.164371521000021,
+                "y": 46.977916805000064
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 73,
+                "FID_Almzentren_JSONToFeatures": 2133,
+                "OBJECTID_1": 2133,
+                "OBJEKT": "HL",
+                "NAME": "Moser-Röggen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T15:43:01Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.383667444000025,
+                "y": 46.97869879600006
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 74,
+                "FID_Almzentren_JSONToFeatures": 3733,
+                "OBJECTID_1": 3733,
+                "OBJEKT": "EL",
+                "NAME": "Rainer-Röggen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T09:42:17Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.385243844000058,
+                "y": 46.979603587000042
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 75,
+                "FID_Almzentren_JSONToFeatures": 2130,
+                "OBJECTID_1": 2130,
+                "OBJEKT": "EL",
+                "NAME": "Lipper-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T11:40:15Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.395633934000045,
+                "y": 46.981472871000051
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 76,
+                "FID_Almzentren_JSONToFeatures": 3201,
+                "OBJECTID_1": 3201,
+                "OBJEKT": "EL",
+                "NAME": "Tschamp-Alm",
+                "STAND": "2019-04-30T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2019-04-30T09:27:52Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:42:39Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.676729566000063,
+                "y": 46.982431055000063
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 77,
+                "FID_Almzentren_JSONToFeatures": 2819,
+                "OBJECTID_1": 2819,
+                "OBJEKT": "EL",
+                "NAME": "Gemeine Röggen-ALM",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T15:39:21Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.379835052000033,
+                "y": 46.98243188400005
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 78,
+                "FID_Almzentren_JSONToFeatures": 3726,
+                "OBJECTID_1": 3726,
+                "OBJEKT": "NL",
+                "NAME": "Fresach-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:47:00Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.402719528000034,
+                "y": 46.983479147000025
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 79,
+                "FID_Almzentren_JSONToFeatures": 3583,
+                "OBJECTID_1": 3583,
+                "OBJEKT": "EL",
+                "NAME": "Puint-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T09:13:48Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.665740467000035,
+                "y": 46.986440132000041
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 80,
+                "FID_Almzentren_JSONToFeatures": 2136,
+                "OBJECTID_1": 2136,
+                "OBJEKT": "NL",
+                "NAME": "Trog-Klazach-Alm (Niederleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:40:55Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.404451232000042,
+                "y": 46.986884174000068
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 81,
+                "FID_Almzentren_JSONToFeatures": 2900,
+                "OBJECTID_1": 2900,
+                "OBJEKT": "EL",
+                "NAME": "Lesacher Schaf-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T11:37:36Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.696878980000065,
+                "y": 46.986910425000076
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 82,
+                "FID_Almzentren_JSONToFeatures": 2109,
+                "OBJECTID_1": 2109,
+                "OBJEKT": "EL",
+                "NAME": "Weisskopf-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T10:25:52Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.665311605000056,
+                "y": 46.987994320000041
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 83,
+                "FID_Almzentren_JSONToFeatures": 2111,
+                "OBJECTID_1": 2111,
+                "OBJEKT": "EL",
+                "NAME": "Jaggler-Galt-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T15:47:07Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.659025771000074,
+                "y": 46.988745361000042
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 84,
+                "FID_Almzentren_JSONToFeatures": 1586,
+                "OBJECTID_1": 1586,
+                "OBJEKT": "EL",
+                "NAME": "Kleinbach-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70723,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T17:05:53Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.302778266000075,
+                "y": 46.989187432000051
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 85,
+                "FID_Almzentren_JSONToFeatures": 2110,
+                "OBJECTID_1": 2110,
+                "OBJEKT": "EL",
+                "NAME": "Neuwand-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T16:06:00Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.661481080000044,
+                "y": 46.989304724000078
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 86,
+                "FID_Almzentren_JSONToFeatures": 2089,
+                "OBJECTID_1": 2089,
+                "OBJEKT": "HL",
+                "NAME": "Mariacher-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T13:52:34Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.38842511200005,
+                "y": 46.989771716000064
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 87,
+                "FID_Almzentren_JSONToFeatures": 2408,
+                "OBJECTID_1": 2408,
+                "OBJEKT": "HL",
+                "NAME": "Trog-Klazach-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:40:34Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.401832874000036,
+                "y": 46.990079438000066
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 88,
+                "FID_Almzentren_JSONToFeatures": 2090,
+                "OBJECTID_1": 2090,
+                "OBJEKT": "EL",
+                "NAME": "Eichham-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:59:34Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.39338301600003,
+                "y": 46.990220620000059
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 89,
+                "FID_Almzentren_JSONToFeatures": 2750,
+                "OBJECTID_1": 2750,
+                "OBJEKT": "EL",
+                "NAME": "Thomaser-Eichham-Alm",
+                "STAND": "2010-05-04T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2010-05-04T14:06:46Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:22:49Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.391606425000077,
+                "y": 46.991374121000035
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 90,
+                "FID_Almzentren_JSONToFeatures": 3316,
+                "OBJECTID_1": 3316,
+                "OBJEKT": "EL",
+                "NAME": "Affental-Alm",
+                "STAND": "2024-01-24T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70724,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2024-01-24T17:32:22Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.137061247000076,
+                "y": 46.992610391000028
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 91,
+                "FID_Almzentren_JSONToFeatures": 2112,
+                "OBJECTID_1": 2112,
+                "OBJEKT": "EL",
+                "NAME": "Anderler-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T10:09:49Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.659976110000059,
+                "y": 46.993138032000047
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 92,
+                "FID_Almzentren_JSONToFeatures": 2184,
+                "OBJECTID_1": 2184,
+                "OBJEKT": "EL",
+                "NAME": "Großbach-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70723,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T09:18:25Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.285715498000059,
+                "y": 46.99700041400007
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 93,
+                "FID_Almzentren_JSONToFeatures": 2129,
+                "OBJECTID_1": 2129,
+                "OBJEKT": "HL",
+                "NAME": "Unterkogl-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T10:32:22Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.391806361000022,
+                "y": 46.99804277100003
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 94,
+                "FID_Almzentren_JSONToFeatures": 2816,
+                "OBJECTID_1": 2816,
+                "OBJEKT": "EL",
+                "NAME": "Brugger-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:18:08Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.395470727000031,
+                "y": 46.998478867000074
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 95,
+                "FID_Almzentren_JSONToFeatures": 2091,
+                "OBJECTID_1": 2091,
+                "OBJEKT": "HL",
+                "NAME": "Unterkogl-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T10:32:13Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.38807358300005,
+                "y": 46.999486628000056
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 96,
+                "FID_Almzentren_JSONToFeatures": 2084,
+                "OBJECTID_1": 2084,
+                "OBJEKT": "NL",
+                "NAME": "Untertschadin-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T10:54:43Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.700928955000052,
+                "y": 47.000842965000061
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 97,
+                "FID_Almzentren_JSONToFeatures": 2288,
+                "OBJECTID_1": 2288,
+                "OBJEKT": "EL",
+                "NAME": "Rainer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T09:18:03Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.672830351000073,
+                "y": 47.002839933000075
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 98,
+                "FID_Almzentren_JSONToFeatures": 3462,
+                "OBJECTID_1": 3462,
+                "OBJEKT": "NL",
+                "NAME": "Berger Melk-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70734,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T11:21:59Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.398440319000031,
+                "y": 47.004451834000065
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 99,
+                "FID_Almzentren_JSONToFeatures": 2258,
+                "OBJECTID_1": 2258,
+                "OBJEKT": "EL",
+                "NAME": "Obenfiger-Metoitz-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T16:53:59Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.696841066000047,
+                "y": 47.012302729000055
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 100,
+                "FID_Almzentren_JSONToFeatures": 2409,
+                "OBJECTID_1": 2409,
+                "OBJEKT": "EL",
+                "NAME": "Strödacher-Blinig-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70723,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T08:58:29Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.292682611000032,
+                "y": 47.013141761000043
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 101,
+                "FID_Almzentren_JSONToFeatures": 3739,
+                "OBJECTID_1": 3739,
+                "OBJEKT": "EL",
+                "NAME": "Tinkenwand-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:28:40Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.680194682000035,
+                "y": 47.014846218000059
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 102,
+                "FID_Almzentren_JSONToFeatures": 2412,
+                "OBJECTID_1": 2412,
+                "OBJEKT": "EL",
+                "NAME": "Umbal-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70723,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:44:27Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.245862068000065,
+                "y": 47.015951055000073
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 103,
+                "FID_Almzentren_JSONToFeatures": 3582,
+                "OBJECTID_1": 3582,
+                "OBJEKT": "EL",
+                "NAME": "Falschedoier-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:19:55Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.684152877000031,
+                "y": 47.019670498000039
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 104,
+                "FID_Almzentren_JSONToFeatures": 1630,
+                "OBJECTID_1": 1630,
+                "OBJEKT": "EL",
+                "NAME": "Leitl-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T11:33:51Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.558581640000057,
+                "y": 47.020512497000027
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 105,
+                "FID_Almzentren_JSONToFeatures": 2269,
+                "OBJECTID_1": 2269,
+                "OBJEKT": "EL",
+                "NAME": "Ranzach-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T09:50:57Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.550416702000064,
+                "y": 47.02065968200003
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 106,
+                "FID_Almzentren_JSONToFeatures": 2268,
+                "OBJECTID_1": 2268,
+                "OBJEKT": "EL",
+                "NAME": "Schmutzer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T14:31:08Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.557351290000042,
+                "y": 47.02162665000003
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 107,
+                "FID_Almzentren_JSONToFeatures": 3174,
+                "OBJECTID_1": 3174,
+                "OBJEKT": "HL",
+                "NAME": "Peischlacher-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:41:39Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.731053549000023,
+                "y": 47.021666074000052
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 108,
+                "FID_Almzentren_JSONToFeatures": 3505,
+                "OBJECTID_1": 3505,
+                "OBJEKT": "EL",
+                "NAME": "Oberzoppat-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70723,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:20:54Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.287769366000077,
+                "y": 47.022113243000035
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 109,
+                "FID_Almzentren_JSONToFeatures": 2267,
+                "OBJECTID_1": 2267,
+                "OBJEKT": "EL",
+                "NAME": "Trog-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:39:07Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.563392506000071,
+                "y": 47.022832579000067
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 110,
+                "FID_Almzentren_JSONToFeatures": 3581,
+                "OBJECTID_1": 3581,
+                "OBJEKT": "EL",
+                "NAME": "Plas-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T08:33:43Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.654361112000061,
+                "y": 47.023067765000064
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 111,
+                "FID_Almzentren_JSONToFeatures": 1639,
+                "OBJECTID_1": 1639,
+                "OBJEKT": "EL",
+                "NAME": "Unterzoppat-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70723,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T11:00:24Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.283980274000044,
+                "y": 47.02307135500007
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 112,
+                "FID_Almzentren_JSONToFeatures": 3271,
+                "OBJECTID_1": 3271,
+                "OBJEKT": "EL",
+                "NAME": "Baumann-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T11:14:46Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.660200553000038,
+                "y": 47.024227298000028
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 113,
+                "FID_Almzentren_JSONToFeatures": 3175,
+                "OBJECTID_1": 3175,
+                "OBJEKT": "EL",
+                "NAME": "Brunn-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:19:12Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.580840245000047,
+                "y": 47.024450990000048
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 114,
+                "FID_Almzentren_JSONToFeatures": 3352,
+                "OBJECTID_1": 3352,
+                "OBJEKT": "EL",
+                "NAME": "Burger-Kar-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:23:37Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.66741846900004,
+                "y": 47.025010394000049
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 115,
+                "FID_Almzentren_JSONToFeatures": 2287,
+                "OBJECTID_1": 2287,
+                "OBJEKT": "EL",
+                "NAME": "Zalesöd-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T15:03:34Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.66508256000003,
+                "y": 47.026595504000056
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 116,
+                "FID_Almzentren_JSONToFeatures": 2815,
+                "OBJECTID_1": 2815,
+                "OBJEKT": "HL",
+                "NAME": "Pahlberg-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T17:34:53Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.608531228000061,
+                "y": 47.028116457000067
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 117,
+                "FID_Almzentren_JSONToFeatures": 1631,
+                "OBJECTID_1": 1631,
+                "OBJEKT": "EL",
+                "NAME": "Äußere Steiner-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T09:38:50Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.548938958000065,
+                "y": 47.030345418000081
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 118,
+                "FID_Almzentren_JSONToFeatures": 2746,
+                "OBJECTID_1": 2746,
+                "OBJEKT": "EL",
+                "NAME": "Nunitz-Alm",
+                "STAND": "2009-08-18T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T16:53:14Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.504622935000043,
+                "y": 47.036357818000056
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 119,
+                "FID_Almzentren_JSONToFeatures": 2170,
+                "OBJECTID_1": 2170,
+                "OBJEKT": "EL",
+                "NAME": "Fritschnitz-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:47:41Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.490697643000033,
+                "y": 47.03729149000003
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 120,
+                "FID_Almzentren_JSONToFeatures": 2173,
+                "OBJECTID_1": 2173,
+                "OBJEKT": "EL",
+                "NAME": "Tschadinpfohl-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:42:29Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.651865007000026,
+                "y": 47.042041544000028
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 121,
+                "FID_Almzentren_JSONToFeatures": 2708,
+                "OBJECTID_1": 2708,
+                "OBJEKT": "EL",
+                "NAME": "Teischnitz-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:14:25Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.670301121000023,
+                "y": 47.043908596000051
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 122,
+                "FID_Almzentren_JSONToFeatures": 2488,
+                "OBJECTID_1": 2488,
+                "OBJEKT": "NL",
+                "NAME": "Ködnitz-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T17:15:30Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.69040433300006,
+                "y": 47.043940436000071
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 123,
+                "FID_Almzentren_JSONToFeatures": 2201,
+                "OBJECTID_1": 2201,
+                "OBJEKT": "EL",
+                "NAME": "Mitteldorfer Kuh-Alm",
+                "STAND": "2009-08-18T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T14:41:24Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.466248268000072,
+                "y": 47.055924078000032
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 124,
+                "FID_Almzentren_JSONToFeatures": 3165,
+                "OBJECTID_1": 3165,
+                "OBJEKT": "EL",
+                "NAME": "Zedlacher-Kuh-Alm",
+                "STAND": "2009-08-18T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T15:01:23Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.459906972000056,
+                "y": 47.055977406000068
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 125,
+                "FID_Almzentren_JSONToFeatures": 2396,
+                "OBJECTID_1": 2396,
+                "OBJEKT": "EL",
+                "NAME": "Katal-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T16:41:35Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.487642675000075,
+                "y": 47.058679808000079
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 126,
+                "FID_Almzentren_JSONToFeatures": 2416,
+                "OBJECTID_1": 2416,
+                "OBJEKT": "EL",
+                "NAME": "Keesflecken-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70723,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T16:44:13Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.282843712000044,
+                "y": 47.06146620800007
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 127,
+                "FID_Almzentren_JSONToFeatures": 2171,
+                "OBJECTID_1": 2171,
+                "OBJEKT": "EL",
+                "NAME": "Bromach-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:17:11Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.545351502000074,
+                "y": 47.063536706000036
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 128,
+                "FID_Almzentren_JSONToFeatures": 2182,
+                "OBJECTID_1": 2182,
+                "OBJEKT": "EL",
+                "NAME": "Staudler-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T16:49:00Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.537719970000069,
+                "y": 47.064749533000054
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 129,
+                "FID_Almzentren_JSONToFeatures": 2935,
+                "OBJECTID_1": 2935,
+                "OBJEKT": "EL",
+                "NAME": "Kessler-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T16:56:45Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.546711728000048,
+                "y": 47.067504650000046
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 130,
+                "FID_Almzentren_JSONToFeatures": 2299,
+                "OBJECTID_1": 2299,
+                "OBJEKT": "EL",
+                "NAME": "Dorfer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70712,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T13:32:13Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.624627463000024,
+                "y": 47.071365297000057
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 131,
+                "FID_Almzentren_JSONToFeatures": 2933,
+                "OBJECTID_1": 2933,
+                "OBJEKT": "EL",
+                "NAME": "Frossnitzer Ochsen-Alm",
+                "STAND": "2009-08-18T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:52:03Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.450824735000026,
+                "y": 47.073657525000044
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 132,
+                "FID_Almzentren_JSONToFeatures": 2200,
+                "OBJECTID_1": 2200,
+                "OBJEKT": "EL",
+                "NAME": "Taxer-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:11:45Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.55031045100003,
+                "y": 47.077428710000049
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 133,
+                "FID_Almzentren_JSONToFeatures": 3740,
+                "OBJECTID_1": 3740,
+                "OBJEKT": "EL",
+                "NAME": "Raneburger-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-18T09:43:34Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.504510152000023,
+                "y": 47.078613168000061
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 134,
+                "FID_Almzentren_JSONToFeatures": 2494,
+                "OBJECTID_1": 2494,
+                "OBJEKT": "SCHL",
+                "NAME": "Frossnitz Schaf-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Schafleger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T14:51:38Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.439497932000052,
+                "y": 47.092039105000026
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 135,
+                "FID_Almzentren_JSONToFeatures": 2167,
+                "OBJECTID_1": 2167,
+                "OBJEKT": "HL",
+                "NAME": "Lenzen Löppe-Alm (Hochleger)",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Hochleger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-17T11:35:06Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.489564656000027,
+                "y": 47.113552778000042
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 136,
+                "FID_Almzentren_JSONToFeatures": 2181,
+                "OBJECTID_1": 2181,
+                "OBJEKT": "EL",
+                "NAME": "Taurer-Löppe-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-19T09:10:57Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.477220642000077,
+                "y": 47.118242100000032
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 137,
+                "FID_Almzentren_JSONToFeatures": 2191,
+                "OBJECTID_1": 2191,
+                "OBJEKT": "EL",
+                "NAME": "Innergschlößer Kuh-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T15:21:08Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.451829457000031,
+                "y": 47.12405807600004
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 138,
+                "FID_Almzentren_JSONToFeatures": 2164,
+                "OBJECTID_1": 2164,
+                "OBJEKT": "NL",
+                "NAME": "Außergschlöss-Kuh-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Niederleger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T10:59:00Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.470557089000067,
+                "y": 47.127475166000067
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 139,
+                "FID_Almzentren_JSONToFeatures": 2971,
+                "OBJECTID_1": 2971,
+                "OBJEKT": "EL",
+                "NAME": "Innergschlößer Ochsen-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Alm ohne Leger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-04T15:21:31Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.450207096000042,
+                "y": 47.130822456000033
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 140,
+                "FID_Almzentren_JSONToFeatures": 1636,
+                "OBJECTID_1": 1636,
+                "OBJEKT": "GAL",
+                "NAME": "Außergschlöss-Galt-Alm",
+                "STAND": "2006-01-10T00:00:00Z",
+                "OBJEKTBEZEICHNUNG": "Galtviehleger",
+                "GEMNR": 70717,
+                "ERFASSUNGSMASSSTAB": 1000,
+                "CREATETIMESTAMP": "2009-10-21T20:19:32Z",
+                "UPDATETIMESTAMP": "2020-08-03T10:58:40Z",
+                "FID_Grenze_JSONToFeatures": 1,
+                "OBJECTID_12": 321,
+                "OBJECTID_12_13": 0,
+                "NAME_1": "Nationalpark Hohe Tauern",
+                "SHAPE_LENG": 0,
+                "NPZONE": 0,
+                "HECTARES": 0,
+                "SHAPE_LE_1": 0
+            },
+            "geometry": {
+                "x": 12.488106897000023,
+                "y": 47.139439706000076
+            }
+        }
+    ]
+}
