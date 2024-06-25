@@ -170,39 +170,34 @@ async function showForecast(lat, lon) {
 
     // aktuelles Wetter und Wettervorhersage implementieren
     console.log(jsondata);
-    L.geoJSON(jsondata, {
-        pointToLayer: function (feature, latlng) {
-            let details = feature.properties.timeseries[0].data.instant.details;
-            let time = new Date(feature.properties.timeseries[0].time);
-            let symbol = feature.properties.timeseries[0].data.next_1_hours.summary.symbol_code;
-            let content = `
-            <h4>Wettervorhersage für ${time.toLocaleString()}</h4>
-            <ul>
-                <li>Luftdruck Meereshöhe (hPa): ${details.air_pressure_at_sea_level}</li>
-                <li>Lufttemperatur (°C): ${details.air_temperature} </li>
-                <li>Bewölkungsgrad (%): ${details.cloud_area_fraction}</li>
-                <li>Luftfeuchtigkeit(%): ${details.relative_humidity}</li>
-                <li>Windrichtung (°): ${details.wind_from_direction}</li>
-                <li>Windgeschwindigkeit (km/h): ${Math.round(details.wind_speed * 3.6)}</li>
-            </ul>
-            `;
+    let content = `
+        <h4>Wettervorhersage für ${lat.toFixed(2)}, ${lon.toFixed(2)}</h4>
+        <ul>
+            <li>Luftdruck Meereshöhe (hPa): ${jsondata.properties.timeseries[0].data.instant.details.air_pressure_at_sea_level}</li>
+            <li>Lufttemperatur (°C): ${jsondata.properties.timeseries[0].data.instant.details.air_temperature}</li>
+            <li>Bewölkungsgrad (%): ${jsondata.properties.timeseries[0].data.instant.details.cloud_area_fraction}</li>
+            <li>Luftfeuchtigkeit(%): ${jsondata.properties.timeseries[0].data.instant.details.relative_humidity}</li>
+            <li>Windrichtung (°): ${jsondata.properties.timeseries[0].data.instant.details.wind_from_direction}</li>
+            <li>Windgeschwindigkeit (km/h): ${Math.round(jsondata.properties.timeseries[0].data.instant.details.wind_speed * 3.6)}</li>
+        </ul>
+    `;
 
-            // Wettericons für die nächsten 24 Stunden in 3-Stunden Schritten
-            for (let i = 0; i <= 24; i += 3) {
-                if (i < feature.properties.timeseries.length) {
-                    let forecastTime = new Date(feature.properties.timeseries[i].time);
-                    let symbol = feature.properties.timeseries[i].data.next_1_hours.summary.symbol_code;
-                    content += `<img src="icons/${symbol}.svg" alt="${symbol}" style="width:32px" title="${forecastTime.toLocaleString()}">`;
-                }
-            }
-
-            // Link zum Datendownload
-            content += `<p><a href="${url}" target="met.no">Daten downloaden</a></p>`;
-            L.popup(latlng, {
-                content: content
-            }).openOn(themaLayer.forecast);
+    // Wettericons für die nächsten 24 Stunden in 3-Stunden Schritten
+    for (let i = 0; i <= 24; i += 3) {
+        if (i < jsondata.properties.timeseries.length) {
+            let forecastTime = new Date(jsondata.properties.timeseries[i].time);
+            let symbol = jsondata.properties.timeseries[i].data.next_1_hours.summary.symbol_code;
+            content += `<img src="icons/${symbol}.svg" alt="${symbol}" style="width:32px" title="${forecastTime.toLocaleString()}">`;
         }
-    }).addTo(themaLayer.forecast);
+    }
+
+    // Link zum Datendownload
+    content += `<p><a href="${url}" target="met.no">Daten downloaden</a></p>`;
+
+    L.popup()
+        .setLatLng([lat, lon])
+        .setContent(content)
+        .openOn(map);
 }
 
 // Karte auf Klick aktualisieren, nur wenn innerhalb der österreichischen Grenzen
@@ -260,3 +255,6 @@ async function loadWind(url) {
 
 // Beispielhafte Winddaten laden
 loadWind("https://geographie.uibk.ac.at/data/ecmwf/data/wind-10u-10v-europe.json");
+
+// Windvorhersage beim Laden der Seite aktivieren
+themaLayer.wind.addTo(map);
