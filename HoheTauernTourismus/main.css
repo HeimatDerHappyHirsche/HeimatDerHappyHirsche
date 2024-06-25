@@ -91,7 +91,7 @@ footer nav {
 }
 
 .touren{
-    --ele-area: #28c8e9ba;
+    --ele-area: #78dcefa8;
       --ele-bg: white;
 }
 
@@ -105,3 +105,23 @@ footer nav {
     border-radius: 10px;
     margin-right: 0.5em;
 }
+
+/* CSS für HTML Text aus- einklappen */
+
+details {
+    border: thin solid;
+    background: #78dcefa8;
+    padding: 0.4em 1em;
+    margin-bottom: 15px;
+    border-radius: 10px;
+};
+
+summary {
+    position: relative;
+    padding-left: 1em;
+    font-weight: 300;
+};
+
+details[open] summary {
+    margin-bottom: 0.4em;
+};
