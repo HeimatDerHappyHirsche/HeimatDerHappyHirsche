@@ -72,9 +72,9 @@ new L.Control.MiniMap(
   let controlElevation = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
-    height: 300,
+    height: 200,
 }).addTo(map);
-controlElevation.load("kreuzhoehenweg_etappe1.gpx");
+controlElevation.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
 
 /*fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
