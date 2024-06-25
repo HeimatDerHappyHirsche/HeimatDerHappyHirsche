@@ -165,6 +165,17 @@ function isInAustria(latlng) {
     return latlng.lat >= austriaBounds[0][0] && latlng.lat <= austriaBounds[1][0] &&
            latlng.lng >= austriaBounds[0][1] && latlng.lng <= austriaBounds[1][1];
 }
+// Grenzen von Österreich einfügen
+fetch('Daten/Oesterreich.geojson')
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: 'red'
+      },
+    }).addTo(map);
+  })
+  .catch(error => console.error('Error fetching data:', error));
 
 // Windkarte
 async function loadWind(url) {

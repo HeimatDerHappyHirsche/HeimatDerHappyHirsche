@@ -98,7 +98,7 @@ fetch('npht_agrenze_new.geojson')
     // Process the fetched data and add it to the map
     L.geoJSON(data, {
       style: {
-        color: 'green' // Change the color to blue
+        color: 'green' 
       },
       onEachFeature: function (feature, layer) {
         if (feature.properties && feature.properties.NAME) {
@@ -299,7 +299,7 @@ fetch('Gipfel_Bedeutend.geojson')
   })
   .catch(error => console.error('Error fetching GeoJSON data:', error));
 
-// Function to fetch Wikipedia content in German with text breaks
+// Function to fetch Wikipedia content 
 function fetchWikipediaContent(peakName) {
   const url = `https://de.wikipedia.org/w/api.php?action=query&origin=*&format=json&prop=extracts&titles=${encodeURIComponent(peakName)}`;
 
