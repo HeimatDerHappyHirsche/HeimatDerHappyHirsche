@@ -68,8 +68,15 @@ new L.Control.MiniMap(
     toggleDisplay: true,
 }
 ).addTo(map);
+ 
+  let controlElevation = L.control.elevation({
+    time: false,
+    elevationDiv: "#profile",
+    height: 300,
+}).addTo(map);
+controlElevation.load("kreuzhoehenweg_etappe1.gpx");
 
-fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
+/*fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
   .then(data => {
     L.geoJSON(data, {
@@ -83,7 +90,7 @@ fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
 var lng = `Almenzentren.geojson${features.geometry.coordinates[0]}`,
     lat = `Almenzentren.geojson${features.geometry.coordinates[1]}`;
 
-show('Almzentren.geojson')
+fetch(`Almzentren.geojson`)
   .then(response => response.json())
   .then(data => {
     L.geoJSON(data, {
@@ -104,7 +111,7 @@ show('Almzentren.geojson')
   .catch(error => {
     console.error('Error loading the GeoJSON data:', error);
   });
-
+*/
 
 
 
