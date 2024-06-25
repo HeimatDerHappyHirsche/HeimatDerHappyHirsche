@@ -125,7 +125,7 @@ nationalParks.forEach(park => {
     // Links für den Nationalpark Hohe Tauern hinzufügen
     if (park.name === "Nationalpark Hohe Tauern") {
         let tourismLink = document.createElement('p');
-        tourismLink.innerHTML = `Für Informationen über touristische Angebote im Nationalpark: <a href="${park.tourismLink}" target="_blank">Nationalpark Hohe Tauern - Tourismus</a>`;
+        tourismLink.innerHTML = `Für Informationen über touristische Angebote im Nationalpark: <a href="${nationalParks.tourismLink}" target="_blank">Nationalpark Hohe Tauern - Tourismus</a>`;
         popupContent.appendChild(tourismLink);
 
         let natureLink = document.createElement('p');
