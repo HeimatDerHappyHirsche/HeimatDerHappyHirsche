@@ -76,7 +76,7 @@ new L.Control.MiniMap(
 }).addTo(map);
 controlElevation.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
 
-let pulldown = document.querySelector("#pulldown");
+/*let pulldown = document.querySelector("#pulldown");
 
 for (let etappe of ETAPPEN) {
   let status = "";
@@ -85,6 +85,45 @@ for (let etappe of ETAPPEN) {
   }
   pulldown.innerHTML += `<option ${status} value="${etappe.start}">Etappe ${etappe.nr}: ${etappe.titel}</option>`;
 }
+
+pulldown.onchange = function (evt) {
+  let username = evt.target.value;
+  let url = `${etappe.link}`;
+  window.location.href = url;
+}
+*/
+
+// Variable für den aktuellen GPX-Layer
+let currentGPXLayer;
+
+// Funktion zum Laden einer GPX-Datei
+function loadGPX(gpxData) {
+  if (currentGPXLayer) {
+    map.removeLayer(currentGPXLayer);
+    controlElevation.clear();
+  }
+
+  fetch(gpxData)
+    .then(response => response.text())
+    .then(gpxData => {
+      currentGPXLayer = new L.Layer(gpxData, {
+        async: true
+      });
+
+      currentGPXLayer.on('loaded', function(e) {
+        map.fitBounds(e.target.getBounds());
+      });
+
+      currentGPXLayer.on('addline', function(e) {
+        controlElevation.addData(e.line);
+      });
+
+      currentGPXLayer.addTo(map);
+    })
+    .catch(error => console.error('Error loading GPX file:', error));
+}
+// Lade die erste Etappe standardmäßig
+loadGPX('Daten/kreuzeckhoehenweg_etappe1.gpx');
 
 /*fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
