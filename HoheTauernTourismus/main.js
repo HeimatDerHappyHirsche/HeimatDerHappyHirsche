@@ -76,6 +76,8 @@ new L.Control.MiniMap(
 }).addTo(map);
 controlElevation.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
 
+let pulldown = document.querySelector("#pulldown");
+
 /*fetch("NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
   .then(data => {
