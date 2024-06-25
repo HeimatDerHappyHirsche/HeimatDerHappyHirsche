@@ -76,6 +76,7 @@ let controlElevation_1 = L.control.elevation({
   toggleDisplay: false,
   theme: "touren",
   height: 200,
+ collapsed:true,
 }).addTo(map);
 controlElevation_1.load("Daten/kreuzeckhoehenweg_etappe1.gpx");
 
@@ -85,6 +86,7 @@ let controlElevation_2 = L.control.elevation({
   toggleDisplay: false,
   theme: "touren",
   height: 200,
+  collapsed:true,
 }).addTo(map);
 controlElevation_2.load("Daten/kreuzeckhoehenweg_etappe2.gpx");
 
@@ -94,6 +96,7 @@ let controlElevation_3 = L.control.elevation({
   toggleDisplay: false,
   theme: "touren",
   height: 200,
+  collapsed:true,
 }).addTo(map);
 controlElevation_3.load("Daten/kreuzeckhoehenweg_etappe3.gpx");
 
@@ -103,6 +106,7 @@ let controlElevation_4 = L.control.elevation({
   toggleDisplay: false,
   theme: "touren",
   height: 200,
+  collapsed:true,
 }).addTo(map);
 controlElevation_4.load("Daten/kreuzeckhoehenweg_etappe4.gpx");
 
