@@ -13,6 +13,7 @@ a {
 main {
     max-width: 1200px;
     margin: auto;
+    text-align: justify;
 }
 
 header {
