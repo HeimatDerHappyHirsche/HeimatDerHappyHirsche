@@ -187,7 +187,7 @@ async function showForecast(lat, lon) {
         if (i < jsondata.properties.timeseries.length) {
             let forecastTime = new Date(jsondata.properties.timeseries[i].time);
             let symbol = jsondata.properties.timeseries[i].data.next_1_hours.summary.symbol_code;
-            content += `<img src="icons/${symbol}.svg" alt="${symbol}" style="width:32px" title="${forecastTime.toLocaleString()}">`;
+            content += `<img src="https://api.met.no/images/weathericons/svg/${symbol}.svg" alt="${symbol}" style="width:32px" title="${forecastTime.toLocaleString()}">`;
         }
     }
 
