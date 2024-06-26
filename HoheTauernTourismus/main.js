@@ -20,8 +20,8 @@ startLayer.addTo(map);
 
 let themaLayer = {
   borders: L.featureGroup().addTo(map),
-  poi: L.markerClusterGroup({ disableClusteringAtZoom: 17 }),
   hut: L.markerClusterGroup({ disableClusteringAtZoom: 17 }),
+  tracks: L.featureGroup()
 }
 
 L.control
@@ -35,7 +35,7 @@ L.control
   },
     {
       "Nationalparkgrenze": themaLayer.borders.addTo(map),
-      "Points of interest": themaLayer.poi.addTo(map),
+      "Top-Wanderwege": themaLayer.tracks.addTo(map),
       "Almen": themaLayer.hut.addTo(map),
     })
   .addTo(map);
@@ -93,6 +93,48 @@ let controlElevation_4 = L.control.elevation({
 }).addTo(map);
 controlElevation_4.load("Daten/kreuzeckhoehenweg_etappe4.gpx");
 
+let controlElevation_5 = L.control.elevation({
+  time: false,
+  elevationDiv: "#profile2",
+  toggleDisplay: false,
+  theme: "tracks",
+  height: 200,
+  collapsed:true,
+}).addTo(map);
+controlElevation_5.load("Daten/track1.gpx");
+
+let controlElevation_6 = L.control.elevation({
+  time: false,
+  elevationDiv: "#profile2",
+  toggleDisplay: false,
+  theme: "tracks",
+  height: 200,
+  collapsed:true,
+}).addTo(map);
+controlElevation_6.load("Daten/track2.gpx");
+
+let controlElevation_7 = L.control.elevation({
+  time: false,
+  elevationDiv: "#profile2",
+  toggleDisplay: false,
+  theme: "tracks",
+  height: 200,
+  collapsed:true,
+}).addTo(map);
+controlElevation_7.load("Daten/track3.gpx");
+
+let controlElevation_8 = L.control.elevation({
+  time: false,
+  elevationDiv: "#profile2",
+  toggleDisplay: false,
+  theme: "tracks",
+  height: 200,
+  collapsed:true,
+}).addTo(map);
+controlElevation_8.load("Daten/track4.gpx");
+
+
+
 /*let polygons = new Array();*/
 fetch("../NationalparkHoheTauern/npht_agrenze_new.geojson")
   .then(response => response.json())
@@ -140,30 +182,16 @@ fetch("Daten/Almzentren.json")
     console.error('Error loading the JSON data:', error);
   });
 
-
+  fetch("Daten/track1.gpx")
+  .then(response => response.gpx())
+  .then(data => {
+    L.gpx(data, {
+    }).addTo(themaLayer.tracks);
+  })
+  
   var markers = L.markerClusterGroup({
       disableClusteringAtZoom: 17
   });
-
-fetch("Daten/NPHT_POI.json")
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      pointToLayer: function (feature, latlng) {
-        return L.marker(latlng, {
-          icon: L.icon({
-            iconUrl: 'icons/information.png',
-          })
-        });
-      },
-      onEachFeature: function (feature, layer) {
-        layer.bindPopup(`
-          <h4>${feature.properties.NAME}</h4>
-        `);
-      }
-    }).addTo(themaLayer.poi);
-  }) 
-  
  
 function zoomToKreuzeckhoehenweg (){
   var bounds1 = controlElevation_1.getBounds();
@@ -209,3 +237,22 @@ console.log(vs)
     return inside;
 };
 */
+/*fetch("Daten/NPHT_POI.json")
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: L.icon({
+            iconUrl: 'icons/information.png',
+          })
+        });
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(`
+          <h4>${feature.properties.NAME}</h4>
+        `);
+      }
+    }).addTo(themaLayer.poi);
+  }) 
+  */

@@ -59,7 +59,12 @@ footer nav {
     border-radius: 10px;
 }
 
-
+#profile2 {
+    margin-top: 0.3em;
+    border: 1px solid gray;
+    padding: 1em;
+    border-radius: 10px;
+}
 .summary {
     margin-bottom: 2em;
 }
@@ -94,6 +99,11 @@ footer nav {
 .touren{
     --ele-area: #78dcefa8;
       --ele-bg: white;
+}
+
+.tracks{
+    --ele-area: #78dcefa8;
+    --ele-bg: white;
 }
 
 .backbutton{
