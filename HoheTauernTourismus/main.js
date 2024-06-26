@@ -163,7 +163,7 @@ fetch("Daten/NPHT_POI.json")
       }
     }).addTo(themaLayer.poi);
   }) 
-  console.log(12)
+  
  
 function zoomToKreuzeckhoehenweg (){
   var bounds1 = controlElevation_1.getBounds();
