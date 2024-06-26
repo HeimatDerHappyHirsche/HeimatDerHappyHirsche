@@ -10,8 +10,7 @@ gorßglockner.setOpacity(0);
 // Karte initialisieren
 var map = L.map('map', {
   fullscreenControl: true,
-}
-).setView([großglockner.lat, großglockner.lng], 10);
+}).setView([großglockner.lat, großglockner.lng], 10);
 gorßglockner.addTo(map)
 
 // BasemapAT Layer mit Leaflet provider plugin als startLayer Variable

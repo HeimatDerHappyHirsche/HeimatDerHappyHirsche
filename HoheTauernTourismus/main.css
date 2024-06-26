@@ -45,7 +45,7 @@ article {
 footer {
     font-family: "Roboto", sans-serif;
     font-size: 0.9em;
-    margin-top: 0.5em;
+    margin-top: 2em;
 }
 
 footer nav {
@@ -88,9 +88,9 @@ footer nav {
 }
 
 .github{
-    position: absolute;
+    
     display: inline-block;
-    right: 5em;
+    right: 0;
     top: 0;
     margin-right: 0.5em;
     padding: 0.4em;
@@ -107,14 +107,15 @@ footer nav {
 }
 
 .backbutton{
-    position: absolute;
+    
     display: inline-block;
-    right: 5em;
+    right: 10;
     color:rgb(255, 255, 255);
     padding: 0.4em;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
     margin-right: 0.5em;
+    text-align: right;
 }
 
 /* CSS für HTML Text aus- einklappen */
