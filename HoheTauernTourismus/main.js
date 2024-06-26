@@ -129,6 +129,9 @@ fetch("Daten/Almzentren.json")
       onEachFeature: function (feature, layer) {
         layer.bindPopup(`
           <h4>${feature.properties.NAME}</h4>
+          <ul>
+          <li>Wirtschaftsform: ${feature.properties.OBJEKTBEZEICHNUNG||'keine Angabe'} </li>
+          </ul>
         `);
       }
     }).addTo(themaLayer.hut);
@@ -159,11 +162,9 @@ fetch("Daten/NPHT_POI.json")
         `);
       }
     }).addTo(themaLayer.poi);
-  })
-  .catch(error => {
-    console.error('Error loading the JSON data:', error);
-  });
-
+  }) 
+  console.log(12)
+ 
 function zoomToKreuzeckhoehenweg (){
   var bounds1 = controlElevation_1.getBounds();
   var bounds2 = controlElevation_2.getBounds();
