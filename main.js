@@ -125,11 +125,11 @@ nationalParks.forEach(park => {
     // Links für den Nationalpark Hohe Tauern hinzufügen
     if (park.name === "Nationalpark Hohe Tauern") {
         let tourismLink = document.createElement('p');
-        tourismLink.innerHTML = `Für Informationen über touristische Angebote im Nationalpark: <a href="https://heimatderhappyhirsche.github.io/HoheTauernTourismus" target="_blank">Nationalpark Hohe Tauern - Tourismus</a>`;
+        tourismLink.innerHTML = `Für Informationen über touristische Angebote im Nationalpark: <a href="${park.tourismLink}" target="_blank">Nationalpark Hohe Tauern - Tourismus</a>`;
         popupContent.appendChild(tourismLink);
 
         let natureLink = document.createElement('p');
-        natureLink.innerHTML = `Die Schönheit der Natur im Nationalpark erleben: <a href="https://heimatderhappyhirsche.github.io/NationalparkHoheTauern" target="_blank">Nationalpark Hohe Tauern - Ökologie und Geographie</a>`;
+        natureLink.innerHTML = `Die Schönheit der Natur im Nationalpark erleben: <a href="${park.natureLink}" target="_blank">Nationalpark Hohe Tauern - Ökologie und Geographie</a>`;
         popupContent.appendChild(natureLink);
     }
 
@@ -214,6 +214,7 @@ function isInAustria(latlng) {
     return latlng.lat >= austriaBounds[0][0] && latlng.lat <= austriaBounds[1][0] &&
            latlng.lng >= austriaBounds[0][1] && latlng.lng <= austriaBounds[1][1];
 }
+
 // Grenzen von Österreich einfügen
 fetch('../HoheTauernTourismus/Daten/Oesterreich.geojson')
   .then(response => response.json())
@@ -249,7 +250,7 @@ async function loadWind(url) {
         displayOptions: {
             directionString: "Windrichtung",
             speedString: "Windgeschwindigkeit",
-            speedUnit: "km/h",
+            speedUnit: "k/h",
             position: "bottomright",
             velocityType: "",
         }
