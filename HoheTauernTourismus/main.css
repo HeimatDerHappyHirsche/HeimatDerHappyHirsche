@@ -11,8 +11,9 @@ a {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
+    text-align: justify;
 }
 
 header {
@@ -44,10 +45,95 @@ article {
 footer {
     font-family: "Roboto", sans-serif;
     font-size: 0.9em;
-    margin-top: 0.5em;
+    margin-top: 2em;
 }
 
 footer nav {
-    display: inline-block;
+    text-align: center;
 }
 
+#profile {
+    margin-top: 0.3em;
+    border: 1px solid gray;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+#profile2 {
+    margin-top: 0.3em;
+    border: 1px solid gray;
+    padding: 1em;
+    border-radius: 10px;
+}
+.summary {
+    margin-bottom: 2em;
+}
+
+.summary-badge {
+    display: inline-block;
+    background-color:rgb(255, 255, 255);
+    padding: 0.4em;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-right: 0.5em;
+}
+
+.buttons {
+    color:rgb(255, 255, 255);
+    display: inline-block;
+    padding: 0.4em;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-right: 0.5em;
+}
+
+.github{
+    
+    display: inline-block;
+    right: 0;
+    top: 0;
+    margin-right: 0.5em;
+    padding: 0.4em;
+}
+
+.touren{
+    --ele-area: #78dcefa8;
+      --ele-bg: white;
+}
+
+.tracks{
+    --ele-area: #78dcefa8;
+    --ele-bg: white;
+}
+
+.backbutton{
+    
+    display: inline-block;
+    right: 10;
+    color:rgb(255, 255, 255);
+    padding: 0.4em;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-right: 0.5em;
+    text-align: right;
+}
+
+/* CSS für HTML Text aus- einklappen */
+
+details {
+    border: thin solid;
+    background: #78dcefa8;
+    padding: 0.4em 1em;
+    margin-bottom: 15px;
+    border-radius: 10px;
+};
+
+summary {
+    position: relative;
+    padding-left: 1em;
+    font-weight: 300;
+};
+
+details[open] summary {
+    margin-bottom: 0.4em;
+};
