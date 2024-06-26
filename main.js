@@ -10,8 +10,8 @@ let nationalParks = [
         lng: 12.713109,
         image: "images/hohetauern.jpg",
         credit: "@WeAppU https://pixabay.com/de/photos/maltatal-malta-stausee-kraftwerk-578207/",
-        tourismLink: "HoheTauernTourismus/index.html",
-        natureLink: "NationalparkHoheTauern/index.html",
+        tourismLink: "https://heimatderhappyhirsche.github.io/HoheTauernTourismus/index.html",
+        natureLink: "https://heimatderhappyhirsche.github.io/NationalparkHoheTauern/index.html",
         wikiTitle: "Nationalpark_Hohe_Tauern"
     },
     {
@@ -216,28 +216,20 @@ function isInAustria(latlng) {
 }
 
 // Grenzen von Österreich einfügen
-fetch('../HoheTauernTourismus/Daten/Oesterreich.geojson')
+fetch('HoheTauernTourismus/Daten/Oesterreich.geojson')
   .then(response => response.json())
   .then(data => {
+    console.log("GeoJSON data loaded successfully", data);
     L.geoJSON(data, {
       style: {
-        color: 'red'
+        color: 'red',
+        weight: 2,
+        opacity: 1,
+        
       },
     }).addTo(map);
   })
-  .catch(error => console.error('Error fetching data:', error));
-
-// Grenzen von Österreich einfügen
-fetch('Daten/Oesterreich.geojson')
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: 'red'
-      },
-    }).addTo(map);
-  })
-  .catch(error => console.error('Error fetching data:', error));
+  .catch(error => console.error('Error fetching GeoJSON data:', error));
 
 // Windkarte
 async function loadWind(url) {
