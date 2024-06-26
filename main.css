@@ -56,3 +56,16 @@ footer nav {
 .popupContent h4 {
     margin-bottom: 10px;
 }
+
+.summary {
+    margin-bottom: 2em;
+}
+
+.summary-badge {
+    display: inline-block;
+    background-color:rgb(255, 255, 255);
+    padding: 0.4em;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-right: 0.5em;
+}
