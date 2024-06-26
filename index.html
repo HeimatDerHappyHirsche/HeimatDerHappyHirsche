@@ -7,19 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Die Nationalparks Österreichs</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
     <!-- Leaflet Providers -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js" integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Leaflet FullScreen -->
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
 
     <!-- Leaflet Velocity -->
     <script src="lib/leaflet-velocity.js"></script>
@@ -42,11 +49,22 @@
             </nav>
         </header>
         <article>
-            <p>Vom Steppensee bis zum Hochgebirge, von der Waldwildnis bis zur Au, vom tosenden Fluss bis zum sanften Tal: Als international anerkannte Schutzgebiete wah-ren die sechs österreichischen Nationalparks Landschaften von wilder Schönheit und enormen Artenreichtum, damit wir auch morgen noch Naturwundern begegnen können.<br>
-                Nationalparks sind nicht nur Schutz- und Erlebnisräume, sondern auch Forschungslaboratorien und Hotspots naturbezogenen Wissens. Ob Langzeit-Monitoring, Wildkatzenerhebung, Graugans-Beobachtung oder Bildungsprojekte im Zeichen des Klimaschutzes: Unsere Nationalparks schaffen Fakten, vermitteln wertvolles Wissen und entfachen Leidenschaft für Natur.<br>
-                Die Standorte der Nationalparks sowie eine Vorhersage über Wind und Wetter <em>(zur besseren Planung Ihres Ausflugs)</em> entnehmen Sie der nachfolgenden Karte.
+            <div class="summary-badge">
+                <i class="fas fa-download"></i> <a href="/bericht.pdf">Download Bericht</a>
+            </div>
+            <p>Vom Steppensee bis zum Hochgebirge, von der Waldwildnis bis zur Au, vom tosenden Fluss bis zum sanften
+                Tal: Als international anerkannte Schutzgebiete wah-ren die sechs österreichischen Nationalparks
+                Landschaften von wilder Schönheit und enormen Artenreichtum, damit wir auch morgen noch Naturwundern
+                begegnen können.<br>
+                Nationalparks sind nicht nur Schutz- und Erlebnisräume, sondern auch Forschungslaboratorien und Hotspots
+                naturbezogenen Wissens. Ob Langzeit-Monitoring, Wildkatzenerhebung, Graugans-Beobachtung oder
+                Bildungsprojekte im Zeichen des Klimaschutzes: Unsere Nationalparks schaffen Fakten, vermitteln
+                wertvolles Wissen und entfachen Leidenschaft für Natur.<br>
+                Die Standorte der Nationalparks sowie eine Vorhersage über Wind und Wetter <em>(zur besseren Planung
+                    Ihres Ausflugs)</em> entnehmen Sie der nachfolgenden Karte.
             </p>
-            <p><a href="https://www.nationalparksaustria.at/de/" target="_blank">Offizielle Website der Nationalparks</a></p>
+            <p><a href="https://www.nationalparksaustria.at/de/" target="_blank">Offizielle Website der
+                    Nationalparks</a></p>
             <div id="map"></div>
             <div id="wikipedia-content">
                 <h3>Wikipedia Informationen</h3>
@@ -57,9 +75,11 @@
         <footer>
             <strong>Datenquellen:</strong>
             <nav>
-                <a href="https://api.met.no/weatherapi/locationforecast/2.0/documentation" target="_blank">MET Norway Locationforecast</a> |
+                <a href="https://api.met.no/weatherapi/locationforecast/2.0/documentation" target="_blank">MET Norway
+                    Locationforecast</a> |
                 <a href="https://github.com/metno/weathericons" target="_blank">MET Weather API icons</a> |
-                <a href="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=47.267222&lon=11.392778" target="_blank">MET Norway Vorhersage Innsbruck</a> |
+                <a href="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=47.267222&lon=11.392778"
+                    target="_blank">MET Norway Vorhersage Innsbruck</a> |
                 <a href="https://www.ecmwf.int/en/forecasts/datasets/open-data" target="_blank">ECMWF Open Data</a>
                 <span id="forecast-date"></span>
             </nav>
