@@ -249,7 +249,7 @@ async function loadWind(url) {
         displayOptions: {
             directionString: "Windrichtung",
             speedString: "Windgeschwindigkeit",
-            speedUnit: "km/h",
+            speedUnit: "k/h",
             position: "bottomright",
             velocityType: "",
         }
