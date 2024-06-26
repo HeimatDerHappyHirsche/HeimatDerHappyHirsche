@@ -10,7 +10,7 @@ let nationalParks = [
         lng: 12.713109,
         image: "images/hohetauern.jpg",
         credit: "@WeAppU https://pixabay.com/de/photos/maltatal-malta-stausee-kraftwerk-578207/",
-        tourismLink: "https://heimatderhappyhirsche.github.io/HoheTauernTourismus/index.html",
+        tourismLink: "HoheTauernTourismus/index.html",
         natureLink: "https://heimatderhappyhirsche.github.io/NationalparkHoheTauern/index.html",
         wikiTitle: "Nationalpark_Hohe_Tauern"
     },
