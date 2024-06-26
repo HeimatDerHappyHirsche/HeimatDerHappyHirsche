@@ -21,7 +21,6 @@ startLayer.addTo(map);
 let themaLayer = {
   borders: L.featureGroup().addTo(map),
   hut: L.markerClusterGroup({ disableClusteringAtZoom: 17 }),
-  tracks: L.featureGroup()
 }
 
 L.control
@@ -35,7 +34,6 @@ L.control
   },
     {
       "Nationalparkgrenze": themaLayer.borders.addTo(map),
-      "Top-Wanderwege": themaLayer.tracks.addTo(map),
       "Almen": themaLayer.hut.addTo(map),
     })
   .addTo(map);
@@ -181,13 +179,6 @@ fetch("Daten/Almzentren.json")
   .catch(error => {
     console.error('Error loading the JSON data:', error);
   });
-
-  fetch("Daten/track1.gpx")
-  .then(response => response.gpx())
-  .then(data => {
-    L.gpx(data, {
-    }).addTo(themaLayer.tracks);
-  })
   
   var markers = L.markerClusterGroup({
       disableClusteringAtZoom: 17
